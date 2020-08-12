@@ -20,6 +20,9 @@ test('index', () => {
 
   , 'isPromise'
   , 'isPromiseLike'
+
+  , 'isFunction'
+  , 'isntFunction'
   ].sort()
 
   const result = Object.keys(index).sort()

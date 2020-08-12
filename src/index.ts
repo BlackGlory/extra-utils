@@ -10,3 +10,5 @@ export * from '@src/async-iterable'
 export * from '@src/object'
 
 export * from '@src/promise'
+
+export * from '@src/function'
