@@ -1,4 +1,4 @@
-import { isString, isStringObject } from './string'
+import { isString, isStringObject } from '@src/string'
 
 export type Char = (string | String) & { length: 1}
 export type CharPrimitive = string & { length: 1}

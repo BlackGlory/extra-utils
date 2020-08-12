@@ -1,8 +1,12 @@
-export * from './char'
-export * from './string'
+export * from '@src/char'
+export * from '@src/string'
 
-export * from './null'
-export * from './undefined'
+export * from '@src/null'
+export * from '@src/undefined'
 
-export * from './iterable'
-export * from './async-iterable'
+export * from '@src/iterable'
+export * from '@src/async-iterable'
+
+export * from '@src/object'
+
+export * from '@src/promise'

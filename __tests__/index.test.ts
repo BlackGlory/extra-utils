@@ -15,6 +15,11 @@ test('index', () => {
   , 'isString', 'isntString'
   , 'isStringPrimitive', 'isntStringPrimitive'
   , 'isStringObject', 'isntStringObject'
+
+  , 'isObject'
+
+  , 'isPromise'
+  , 'isPromiseLike'
   ].sort()
 
   const result = Object.keys(index).sort()
