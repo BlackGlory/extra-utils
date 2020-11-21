@@ -23,6 +23,9 @@ test('index', () => {
 
   , 'isFunction'
   , 'isntFunction'
+
+  , 'isNodeJSWritableStream'
+  , 'isNodeJSReadableStream'
   ].sort()
 
   const result = Object.keys(index).sort()

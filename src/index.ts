@@ -12,3 +12,5 @@ export * from '@src/object'
 export * from '@src/promise'
 
 export * from '@src/function'
+
+export * from '@src/node-js-stream'
