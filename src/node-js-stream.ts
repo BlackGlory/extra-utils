@@ -4,13 +4,13 @@ import { isObject } from './object'
 
 export function isNodeJSWritableStream(val: any): val is NodeJS.WritableStream {
   return isObject(val)
-      && typeof val._write === 'function'
-      && typeof val._writev === 'function'
-      && typeof val._final === 'function'
+      && typeof val.writable === 'boolean'
+      && typeof val.write === 'function'
 }
 
 export function isNodeJSReadableStream(val: any): val is NodeJS.ReadableStream {
   return isObject(val)
-      && typeof val._read === 'function'
+      && typeof val.readable === 'boolean'
+      && typeof val.read === 'function'
       && typeof val.pipe === 'function'
 }
