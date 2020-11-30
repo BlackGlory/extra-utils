@@ -4,6 +4,14 @@ export function isPromise<T>(val: any): val is Promise<T> {
   return val instanceof Promise
 }
 
+export function isntPromise(val: unknown): boolean {
+  return !isPromise(val)
+}
+
 export function isPromiseLike<T>(val: any): val is PromiseLike<T> {
   return isObject(val) && typeof val.then === 'function'
+}
+
+export function isntPromiseLike(val: unknown): boolean {
+  return !isntPromiseLike(val)
 }

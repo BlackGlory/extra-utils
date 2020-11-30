@@ -16,16 +16,18 @@ test('index', () => {
   , 'isStringPrimitive', 'isntStringPrimitive'
   , 'isStringObject', 'isntStringObject'
 
-  , 'isObject'
+  , 'isObject', 'isntObject'
 
-  , 'isPromise'
-  , 'isPromiseLike'
+  , 'isPromise', 'isntPromise'
+  , 'isPromiseLike', 'isntPromiseLike'
 
-  , 'isFunction'
-  , 'isntFunction'
+  , 'isFunction' , 'isntFunction'
 
-  , 'isNodeJSWritableStream'
-  , 'isNodeJSReadableStream'
+  , 'isNodeJSWritableStream', 'isntNodeJSWritableStream'
+  , 'isNodeJSReadableStream', 'isntNodeJSReadableStream'
+
+  , 'isJson'
+  , 'isntJson'
   ].sort()
 
   const result = Object.keys(index).sort()

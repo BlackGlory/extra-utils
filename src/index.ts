@@ -14,3 +14,5 @@ export * from '@src/promise'
 export * from '@src/function'
 
 export * from '@src/node-js-stream'
+
+export * from '@src/json'
