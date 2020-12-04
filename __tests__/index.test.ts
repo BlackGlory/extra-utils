@@ -28,6 +28,9 @@ test('index', () => {
 
   , 'isJson'
   , 'isntJson'
+
+  , 'isFalsy'
+  , 'isntFalsy'
   ].sort()
 
   const result = Object.keys(index).sort()
