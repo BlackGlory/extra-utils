@@ -18,3 +18,5 @@ export * from '@src/node-js-stream'
 export * from '@src/json'
 
 export * from '@src/falsy'
+
+export * from '@src/dict'
