@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/BlackGlory/types/compare/v0.1.8...v0.1.9) (2020-12-14)
+
+
+### Features
+
+* add Dict interface ([0e8054a](https://github.com/BlackGlory/types/commit/0e8054af97461e352060f7f867e8cf159676005d))
+
 ### [0.1.8](https://github.com/BlackGlory/types/compare/v0.1.7...v0.1.8) (2020-12-04)
 
 
