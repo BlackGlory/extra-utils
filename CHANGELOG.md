@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/BlackGlory/types/compare/v0.1.9...v0.1.10) (2020-12-19)
+
+
+### Features
+
+* add JsonRpc ([c417108](https://github.com/BlackGlory/types/commit/c417108224d2d1b6722c6ba45c4ed95b6eda15b7))
+
 ### [0.1.9](https://github.com/BlackGlory/types/compare/v0.1.8...v0.1.9) (2020-12-14)
 
 
