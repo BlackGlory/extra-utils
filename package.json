@@ -55,5 +55,7 @@
     "tscpaths": "^0.0.9",
     "typescript": "^4.1.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ajv": "^7.0.1"
+  }
 }
