@@ -1,5 +1,6 @@
 export * from '@src/char'
 export * from '@src/string'
+export * from '@src/number'
 
 export * from '@src/null'
 export * from '@src/undefined'
@@ -16,6 +17,7 @@ export * from '@src/function'
 export * from '@src/node-js-stream'
 
 export * from '@src/json'
+export * from '@src/json-rpc'
 
 export * from '@src/falsy'
 
