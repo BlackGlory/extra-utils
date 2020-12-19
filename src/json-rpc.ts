@@ -1,11 +1,24 @@
-import { isObject } from './object'
-import { isString } from './string'
-import { isNumber } from './number'
 import { Dict } from './dict'
-import {  } from 'ajv'
+import Ajv from 'ajv'
+
+const ajv = new Ajv()
 
 export type JsonRpcId = string | number
+const JsonRpcIdSchema = {
+  oneOf: [
+    { type: 'string' }
+  , { type: 'number' }
+  ]
+}
+
 export type JsonRpcParams<T> = T[] | Dict<T>
+const JsonRpcParamsSchema = {
+  oneOf: [
+    { type: 'array' }
+  , { type: 'object' }
+  ]
+}
+
 export type JsonRpc<T> =
 | JsonRpcNotification<T>
 | JsonRpcRequest<T>
@@ -20,6 +33,16 @@ export interface JsonRpcNotification<T> {
   method: string
   params?: JsonRpcParams<T>
 }
+const JsonRpcNotificationSchema = {
+  type: 'object'
+, properties: {
+    jsonrpc: { type: 'string' }
+  , method: { type: 'string' }
+  , params: JsonRpcParamsSchema
+  , id: false
+  }
+, required: ['jsonrpc', 'method']
+}
 
 export interface JsonRpcRequest<T> {
   jsonrpc: '2.0'
@@ -27,17 +50,30 @@ export interface JsonRpcRequest<T> {
   method: string
   params?: JsonRpcParams<T>
 }
+const JsonRpcRequestSchema = {
+  type: 'object'
+, properties: {
+    jsonrpc: { type: 'string' }
+  , id: JsonRpcIdSchema
+  , method: { type: 'string' }
+  , params: JsonRpcParamsSchema
+  }
+, required: ['jsonrpc', 'id', 'method']
+}
 
 export interface JsonRpcSuccess<T> {
   jsonrpc: '2.0'
   id: JsonRpcId
   result: T
 }
-
-export interface JsonRpcError<T> {
-  jsonrpc: '2.0'
-  id: JsonRpcId
-  error: JsonRpcErrorObject<T>
+const JsonRpcSuccessSchema = {
+  type: 'object'
+, properties: {
+    jsonrpc: { type: 'string' }
+  , id: JsonRpcIdSchema
+  , result: {}
+  }
+, required: ['jsonrpc', 'id', 'result']
 }
 
 export interface JsonRpcErrorObject<T> {
@@ -45,30 +81,43 @@ export interface JsonRpcErrorObject<T> {
   message: string
   data?: T
 }
+const JsonRpcErrorObjectSchema = {
+  type: 'object'
+, properties: {
+    code: { type: 'number' }
+  , message: { type: 'string' }
+  , data: {}
+  }
+, required: ['code', 'message']
+}
 
-export function isJsonRpc<T>(val: unknown): val is JsonRpc<T> {
-  return isObject(val)
-      && 'jsonrpc' in val && isString(val['jsonrpc'])
+export interface JsonRpcError<T> {
+  jsonrpc: '2.0'
+  id: JsonRpcId
+  error: JsonRpcErrorObject<T>
+}
+const JsonRpcErrorSchema = {
+  type: 'object'
+, properties: {
+    jsonrpc: { type: 'string' }
+  , id: JsonRpcIdSchema
+  , error: JsonRpcErrorObjectSchema
+  }
+, required: ['jsonrpc', 'id', 'error']
 }
 
 export function isJsonRpcNotification<T>(val: unknown): val is JsonRpcNotification<T> {
-  return isJsonRpc<T>(val)
-      && 'method' in val && isString(val['method'])
-      && !('id' in val)
+  return ajv.validate(JsonRpcNotificationSchema, val)
 }
 
 export function isJsonRpcRequest<T>(val: unknown): val is JsonRpcRequest<T> {
-  return isJsonRpc<T>(val)
-      && 'method' in val && isString(val['method'])
-      && hasId(val)
+  return ajv.validate(JsonRpcRequestSchema, val)
+}
+
+export function isJsonRpcSuccess<T>(val: unknown): val is JsonRpcSuccess<T> {
+  return ajv.validate(JsonRpcSuccessSchema, val)
 }
 
 export function isJsonRpcError<T>(val: unknown): val is JsonRpcError<T> {
-  return isJsonRpc<T>(val)
-      && hasId()
-      && 'error' in val && isObject(val['error'])
-}
-
-function hasId(val: Dict<any>): boolean {
-  return 'id' in val && (isString(val['id']) || isNumber(val['id']))
+  return ajv.validate(JsonRpcErrorSchema, val)
 }

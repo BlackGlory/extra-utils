@@ -16,6 +16,8 @@ test('index', () => {
   , 'isStringPrimitive', 'isntStringPrimitive'
   , 'isStringObject', 'isntStringObject'
 
+  , 'isNumber'
+
   , 'isObject', 'isntObject'
 
   , 'isPromise', 'isntPromise'
@@ -28,6 +30,11 @@ test('index', () => {
 
   , 'isJson'
   , 'isntJson'
+
+  , 'isJsonRpcNotification'
+  , 'isJsonRpcRequest'
+  , 'isJsonRpcSuccess'
+  , 'isJsonRpcError'
 
   , 'isFalsy'
   , 'isntFalsy'
