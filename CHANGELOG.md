@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/BlackGlory/types/compare/v0.1.12...v0.2.0) (2020-12-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* use `instanceof` for HTMLElement
+
+### Features
+
+* remove type guards for HTMLElement ([0a89641](https://github.com/BlackGlory/types/commit/0a89641d8b737de21a4162713b832c34757825a6))
+
 ### [0.1.12](https://github.com/BlackGlory/types/compare/v0.1.11...v0.1.12) (2020-12-24)
 
 
