@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/BlackGlory/types/compare/v0.2.0...v0.2.1) (2020-12-26)
+
+
+### Features
+
+* add Getter, Setter ([42fc6e8](https://github.com/BlackGlory/types/commit/42fc6e8dfd71b30cc63affe0897d2cb5c5a63fb9))
+
 ## [0.2.0](https://github.com/BlackGlory/types/compare/v0.1.12...v0.2.0) (2020-12-24)
 
 
