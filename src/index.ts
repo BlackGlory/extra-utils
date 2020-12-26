@@ -22,3 +22,6 @@ export * from '@src/json-rpc'
 export * from '@src/falsy'
 
 export * from '@src/dict'
+
+export * from '@src/getter'
+export * from '@src/setter'
