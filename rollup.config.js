@@ -15,7 +15,7 @@ function createOptions({ directory, target }) {
     , plugins: [
         typescript({ target })
       , json()
-      , resolve()
+      , resolve({ browser: true })
       , commonjs()
       , analyze({ summaryOnly: true })
       ]
