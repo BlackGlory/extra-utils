@@ -1,5 +1,11 @@
 import typescript from '@rollup/plugin-typescript'
+import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
+import json from '@rollup/plugin-json'
 import { terser } from 'rollup-plugin-terser'
+import analyze from 'rollup-plugin-analyzer'
+
+const UMD_NAME = 'Types'
 
 function createOptions({ directory, target }) {
   return [
@@ -8,13 +14,20 @@ function createOptions({ directory, target }) {
     , output: createOutput('index')
     , plugins: [
         typescript({ target })
+      , json()
+      , resolve()
+      , commonjs()
+      , analyze({ summaryOnly: true })
       ]
     }
   , {
       input: 'src/index.ts'
     , output: createMinification('index')
     , plugins: [
-        typescript({ target })
+        typescript()
+      , json()
+      , resolve({ browser: true })
+      , commonjs()
       , terser()
       ]
     }
@@ -30,7 +43,7 @@ function createOptions({ directory, target }) {
     , {
         file: `dist/${directory}/${name}.umd.js`
       , format: 'umd'
-      , name: 'Types'
+      , name: UMD_NAME
       , sourcemap: true
       }
     ]
@@ -46,7 +59,7 @@ function createOptions({ directory, target }) {
     , {
         file: `dist/${directory}/${name}.umd.min.js`
       , format: 'umd'
-      , name: 'Types'
+      , name: UMD_NAME
       , sourcemap: true
       }
     ]
