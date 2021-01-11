@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/BlackGlory/types/compare/v0.2.4...v0.2.5) (2021-01-11)
+
+
+### Features
+
+* add isAbsoluteURL ([0d15610](https://github.com/BlackGlory/types/commit/0d1561036646d08b9c7a1fdf5423ccea4d7c34fe))
+
 ### [0.2.4](https://github.com/BlackGlory/types/compare/v0.2.3...v0.2.4) (2021-01-04)
 
 
