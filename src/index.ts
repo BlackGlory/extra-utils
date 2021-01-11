@@ -25,3 +25,5 @@ export * from '@src/dict'
 
 export * from '@src/getter'
 export * from '@src/setter'
+
+export * from '@src/url'
