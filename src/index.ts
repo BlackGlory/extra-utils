@@ -27,3 +27,5 @@ export * from '@src/getter'
 export * from '@src/setter'
 
 export * from '@src/url'
+
+export * from '@src/dom'
