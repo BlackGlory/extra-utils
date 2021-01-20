@@ -1,6 +1,6 @@
 {
   "name": "@blackglory/types",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Common types and type guards without magic",
   "files": [
     "lib",

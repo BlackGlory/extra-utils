@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.9](https://github.com/BlackGlory/types/compare/v0.2.8...v0.2.9) (2021-01-20)
+
+
+### Bug Fixes
+
+* es2018 build ([e4d9820](https://github.com/BlackGlory/types/commit/e4d982079193e18b09e5bae7db42ab95e7c6ef2c))
+
 ### [0.2.8](https://github.com/BlackGlory/types/compare/v0.2.7...v0.2.8) (2021-01-20)
 
 ### [0.2.7](https://github.com/BlackGlory/types/compare/v0.2.6...v0.2.7) (2021-01-16)
