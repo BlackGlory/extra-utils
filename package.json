@@ -67,6 +67,7 @@
   "dependencies": {
     "@types/node": "^14.14.22",
     "ajv": "^7.0.3",
+    "extra-dom": "^0.2.9",
     "jsdom": "^16.4.0"
   }
 }
