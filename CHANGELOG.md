@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10](https://github.com/BlackGlory/types/compare/v0.2.9...v0.2.10) (2021-01-31)
+
+
+### Features
+
+* add Node.js support ([2c76829](https://github.com/BlackGlory/types/commit/2c76829f86f82881e16abdd93f89cf8577e24ec8))
+
 ### [0.2.9](https://github.com/BlackGlory/types/compare/v0.2.8...v0.2.9) (2021-01-20)
 
 
