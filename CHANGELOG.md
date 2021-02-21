@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.16](https://github.com/BlackGlory/types/compare/v0.2.15...v0.2.16) (2021-02-21)
+
+
+### Features
+
+* add functions ([1b05438](https://github.com/BlackGlory/types/commit/1b05438bd42bee1d8b9e29eb569482ca69c84a43))
+
 ### [0.2.15](https://github.com/BlackGlory/types/compare/v0.2.14...v0.2.15) (2021-02-10)
 
 
