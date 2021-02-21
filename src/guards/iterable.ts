@@ -1,5 +1,5 @@
-import { isntNull } from '@src/null'
-import { isntUndefined } from '@src/undefined'
+import { isntNull } from '@guards/null'
+import { isntUndefined } from '@guards/undefined'
 
 export function isIterable<T>(val: any): val is Iterable<T> {
   return isntNull(val)
@@ -7,6 +7,6 @@ export function isIterable<T>(val: any): val is Iterable<T> {
       && typeof val[Symbol.iterator] === 'function'
 }
 
-export function isntIterable(val: unknown): boolean {
+export function isntIterable<T>(val: unknown): val is Exclude<T, Iterable<unknown>> {
   return !isIterable(val)
 }

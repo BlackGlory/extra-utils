@@ -1,10 +1,4 @@
-export type Json =
-| string
-| number
-| boolean
-| null
-| { [property: string]: Json }
-| Json[]
+import { Json } from '@interfaces/json'
 
 export function isJson(val: unknown): val is Json {
   try {
@@ -15,6 +9,6 @@ export function isJson(val: unknown): val is Json {
   }
 }
 
-export function isntJson(val: unknown): boolean {
+export function isntJson<T>(val: T): val is Exclude<T, Json> {
   return !isntJson(val)
 }

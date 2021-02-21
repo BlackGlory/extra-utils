@@ -1,9 +1,6 @@
-import { Dict } from './dict'
+import { JsonRpcError, JsonRpcNotification, JsonRpcRequest, JsonRpcSuccess } from '@interfaces/json-rpc'
 import Ajv from 'ajv'
 
-const ajv = new Ajv()
-
-export type JsonRpcId = string | number
 const JsonRpcIdSchema = {
   oneOf: [
     { type: 'string' }
@@ -11,7 +8,6 @@ const JsonRpcIdSchema = {
   ]
 }
 
-export type JsonRpcParams<T> = T[] | Dict<T>
 const JsonRpcParamsSchema = {
   oneOf: [
     { type: 'array' }
@@ -19,20 +15,6 @@ const JsonRpcParamsSchema = {
   ]
 }
 
-export type JsonRpc<T> =
-| JsonRpcNotification<T>
-| JsonRpcRequest<T>
-| JsonRpcResponse<T>
-
-export type JsonRpcResponse<T> =
-| JsonRpcSuccess<T>
-| JsonRpcError<T>
-
-export interface JsonRpcNotification<T> {
-  jsonrpc: '2.0'
-  method: string
-  params?: JsonRpcParams<T>
-}
 const JsonRpcNotificationSchema = {
   type: 'object'
 , properties: {
@@ -44,12 +26,6 @@ const JsonRpcNotificationSchema = {
 , required: ['jsonrpc', 'method']
 }
 
-export interface JsonRpcRequest<T> {
-  jsonrpc: '2.0'
-  id: JsonRpcId
-  method: string
-  params?: JsonRpcParams<T>
-}
 const JsonRpcRequestSchema = {
   type: 'object'
 , properties: {
@@ -61,11 +37,6 @@ const JsonRpcRequestSchema = {
 , required: ['jsonrpc', 'id', 'method']
 }
 
-export interface JsonRpcSuccess<T> {
-  jsonrpc: '2.0'
-  id: JsonRpcId
-  result: T
-}
 const JsonRpcSuccessSchema = {
   type: 'object'
 , properties: {
@@ -76,11 +47,6 @@ const JsonRpcSuccessSchema = {
 , required: ['jsonrpc', 'id', 'result']
 }
 
-export interface JsonRpcErrorObject<T> {
-  code: number
-  message: string
-  data?: T
-}
 const JsonRpcErrorObjectSchema = {
   type: 'object'
 , properties: {
@@ -91,11 +57,6 @@ const JsonRpcErrorObjectSchema = {
 , required: ['code', 'message']
 }
 
-export interface JsonRpcError<T> {
-  jsonrpc: '2.0'
-  id: JsonRpcId
-  error: JsonRpcErrorObject<T>
-}
 const JsonRpcErrorSchema = {
   type: 'object'
 , properties: {
@@ -107,17 +68,37 @@ const JsonRpcErrorSchema = {
 }
 
 export function isJsonRpcNotification<T>(val: unknown): val is JsonRpcNotification<T> {
+  const ajv = new Ajv()
   return ajv.validate(JsonRpcNotificationSchema, val)
 }
 
+export function isntJsonRpcNotification<T>(val: T): val is Exclude<T, JsonRpcNotification<unknown>> {
+  return !isJsonRpcNotification(val)
+}
+
 export function isJsonRpcRequest<T>(val: unknown): val is JsonRpcRequest<T> {
+  const ajv = new Ajv()
   return ajv.validate(JsonRpcRequestSchema, val)
 }
 
+export function isntJsonRpcRequest<T>(val: T): val is Exclude<T, JsonRpcRequest<unknown>> {
+  return !isJsonRpcRequest(val)
+}
+
 export function isJsonRpcSuccess<T>(val: unknown): val is JsonRpcSuccess<T> {
+  const ajv = new Ajv()
   return ajv.validate(JsonRpcSuccessSchema, val)
 }
 
+export function isntJsonRpcSuccess<T>(val: T): val is Exclude<T, JsonRpcSuccess<unknown>> {
+  return !isJsonRpcSuccess(val)
+}
+
 export function isJsonRpcError<T>(val: unknown): val is JsonRpcError<T> {
+  const ajv = new Ajv()
   return ajv.validate(JsonRpcErrorSchema, val)
+}
+
+export function isntJsonRpcError<T>(val: T): val is Exclude<T, JsonRpcError<unknown>> {
+  return !isJsonRpcError(val)
 }

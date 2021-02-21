@@ -1,4 +1,4 @@
-import { isJsonRpcNotification, isJsonRpcRequest, isJsonRpcSuccess, isJsonRpcError } from '@src/json-rpc'
+import { isJsonRpcNotification, isJsonRpcRequest, isJsonRpcSuccess, isJsonRpcError } from '@guards/json-rpc'
 
 describe('isJsonRpcNotification', () => {
   it('return true', () => {

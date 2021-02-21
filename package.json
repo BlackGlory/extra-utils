@@ -63,6 +63,7 @@
     "standard-version": "^9.1.0",
     "ts-jest": "^26.5.0",
     "tscpaths": "^0.0.9",
+    "tsd": "^0.14.0",
     "tslib": "^2.1.0",
     "typescript": "^4.1.3"
   },

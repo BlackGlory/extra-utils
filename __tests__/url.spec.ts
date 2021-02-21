@@ -1,4 +1,4 @@
-import { isAbsoluteURL } from '@src/url'
+import { isAbsoluteURL } from '@guards/url'
 
 describe('isAbsoluteURL(str: string): boolean', () => {
   describe('is absolute url', () => {

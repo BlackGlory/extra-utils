@@ -1,6 +1,6 @@
 // https://nodejs.org/docs/latest/api/stream.html#stream_api_for_stream_implementers
 
-import { isObject } from './object'
+import { isObject } from '@guards/object'
 
 export function isNodeJSWritableStream(val: any): val is NodeJS.WritableStream {
   return isObject(val)
@@ -8,7 +8,7 @@ export function isNodeJSWritableStream(val: any): val is NodeJS.WritableStream {
       && typeof val.write === 'function'
 }
 
-export function isntNodeJSWritableStream(val: unknown): boolean {
+export function isntNodeJSWritableStream<T>(val: T): val is Exclude<T, NodeJS.WritableStream> {
   return !isNodeJSWritableStream(val)
 }
 
@@ -19,6 +19,6 @@ export function isNodeJSReadableStream(val: any): val is NodeJS.ReadableStream {
       && typeof val.pipe === 'function'
 }
 
-export function isntNodeJSReadableStream(val: unknown): boolean {
+export function isntNodeJSReadableStream<T>(val: T): val is Exclude<T, NodeJS.ReadableStream> {
   return !isNodeJSReadableStream(val)
 }

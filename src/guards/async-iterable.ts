@@ -1,5 +1,5 @@
-import { isntNull } from '@src/null'
-import { isntUndefined } from '@src/undefined'
+import { isntNull } from '@guards/null'
+import { isntUndefined } from '@guards/undefined'
 
 export function isAsyncIterable<T>(val: any): val is AsyncIterable<T> {
   return isntNull(val)
@@ -7,6 +7,6 @@ export function isAsyncIterable<T>(val: any): val is AsyncIterable<T> {
       && typeof val[Symbol.asyncIterator] === 'function'
 }
 
-export function isntAsyncIterable(val: unknown): boolean {
+export function isntAsyncIterable<T>(val: T): val is Exclude<T, AsyncIterable<unknown>> {
   return !isAsyncIterable(val)
 }

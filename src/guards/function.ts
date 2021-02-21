@@ -2,6 +2,6 @@ export function isFunction<T extends Function = (...args: any[]) => any>(val: un
   return typeof val === 'function'
 }
 
-export function isntFunction(val: unknown): boolean {
+export function isntFunction<T>(val: T): val is Exclude<T, Function> {
   return !isFunction(val)
 }

@@ -16,7 +16,7 @@ test('index', () => {
   , 'isStringPrimitive', 'isntStringPrimitive'
   , 'isStringObject', 'isntStringObject'
 
-  , 'isNumber'
+  , 'isNumber', 'isntNumber'
 
   , 'isObject', 'isntObject'
 
@@ -28,21 +28,19 @@ test('index', () => {
   , 'isNodeJSWritableStream', 'isntNodeJSWritableStream'
   , 'isNodeJSReadableStream', 'isntNodeJSReadableStream'
 
-  , 'isJson'
-  , 'isntJson'
+  , 'isJson', 'isntJson'
 
-  , 'isJsonRpcNotification'
-  , 'isJsonRpcRequest'
-  , 'isJsonRpcSuccess'
-  , 'isJsonRpcError'
+  , 'isJsonRpcNotification', 'isntJsonRpcNotification'
+  , 'isJsonRpcRequest', 'isntJsonRpcRequest'
+  , 'isJsonRpcSuccess', 'isntJsonRpcSuccess'
+  , 'isJsonRpcError', 'isntJsonRpcError'
 
-  , 'isFalsy'
-  , 'isntFalsy'
+  , 'isFalsy', 'isntFalsy'
 
   , 'isAbsoluteURL'
 
-  , 'isElement'
-  , 'isDocument'
+  , 'isElement', 'isntElement'
+  , 'isDocument', 'isntDocument'
   ].sort()
 
   const result = Object.keys(index).sort()
