@@ -67,8 +67,10 @@ const JsonRpcErrorSchema = {
 , required: ['jsonrpc', 'id', 'error']
 }
 
+let ajv: Ajv
+
 export function isJsonRpcNotification<T>(val: unknown): val is JsonRpcNotification<T> {
-  const ajv = new Ajv()
+  if (!ajv) ajv = new Ajv()
   return ajv.validate(JsonRpcNotificationSchema, val)
 }
 
@@ -77,7 +79,7 @@ export function isntJsonRpcNotification<T>(val: T): val is Exclude<T, JsonRpcNot
 }
 
 export function isJsonRpcRequest<T>(val: unknown): val is JsonRpcRequest<T> {
-  const ajv = new Ajv()
+  if (!ajv) ajv = new Ajv()
   return ajv.validate(JsonRpcRequestSchema, val)
 }
 
@@ -86,7 +88,7 @@ export function isntJsonRpcRequest<T>(val: T): val is Exclude<T, JsonRpcRequest<
 }
 
 export function isJsonRpcSuccess<T>(val: unknown): val is JsonRpcSuccess<T> {
-  const ajv = new Ajv()
+  if (!ajv) ajv = new Ajv()
   return ajv.validate(JsonRpcSuccessSchema, val)
 }
 
@@ -95,7 +97,7 @@ export function isntJsonRpcSuccess<T>(val: T): val is Exclude<T, JsonRpcSuccess<
 }
 
 export function isJsonRpcError<T>(val: unknown): val is JsonRpcError<T> {
-  const ajv = new Ajv()
+  if (!ajv) ajv = new Ajv()
   return ajv.validate(JsonRpcErrorSchema, val)
 }
 
