@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.22](https://github.com/BlackGlory/types/compare/v0.2.21...v0.2.22) (2021-02-28)
+
+
+### Features
+
+* add Constructor, ReturnTypeOfConstructor ([d49b0d1](https://github.com/BlackGlory/types/commit/d49b0d1d1ef6d44324bd22f40b6cc4089a96279c))
+
 ### [0.2.21](https://github.com/BlackGlory/types/compare/v0.2.20...v0.2.21) (2021-02-28)
 
 
