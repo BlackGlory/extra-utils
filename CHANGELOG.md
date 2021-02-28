@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.19](https://github.com/BlackGlory/types/compare/v0.2.18...v0.2.19) (2021-02-28)
+
+
+### Features
+
+* add array, object interfaces ([d91e3b1](https://github.com/BlackGlory/types/commit/d91e3b143bb01a8b291ced0007dfdbbd4c2805f5))
+
 ### [0.2.18](https://github.com/BlackGlory/types/compare/v0.2.17...v0.2.18) (2021-02-25)
 
 ### [0.2.17](https://github.com/BlackGlory/types/compare/v0.2.16...v0.2.17) (2021-02-24)
