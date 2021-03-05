@@ -49,7 +49,6 @@
     "@rollup/plugin-typescript": "^8.2.0",
     "@types/jest": "^26.0.20",
     "@types/jsdom": "^16.2.6",
-    "@types/node": "^14.14.31",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.21.0",
@@ -69,10 +68,6 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "ajv": "^7.1.1",
-    "extra-dom": "^0.2.12"
-  },
-  "peerDependencies": {
-    "@types/node": "*"
+    "ajv": "^7.1.1"
   }
 }

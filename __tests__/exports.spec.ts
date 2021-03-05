@@ -20,13 +20,7 @@ test('index', () => {
 
   , 'isObject', 'isntObject'
 
-  , 'isPromise', 'isntPromise'
-  , 'isPromiseLike', 'isntPromiseLike'
-
   , 'isFunction' , 'isntFunction'
-
-  , 'isNodeJSWritableStream', 'isntNodeJSWritableStream'
-  , 'isNodeJSReadableStream', 'isntNodeJSReadableStream'
 
   , 'isJson', 'isntJson'
 
@@ -38,9 +32,6 @@ test('index', () => {
   , 'isFalsy', 'isntFalsy'
 
   , 'isAbsoluteURL'
-
-  , 'isElement', 'isntElement'
-  , 'isDocument', 'isntDocument'
   ].sort()
 
   const result = Object.keys(index).sort()
