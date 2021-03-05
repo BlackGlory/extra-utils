@@ -73,6 +73,6 @@
     "extra-dom": "^0.2.12"
   },
   "peerDependencies": {
-    "@types/node": "^14.14.31"
+    "@types/node": "*"
   }
 }
