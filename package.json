@@ -49,8 +49,9 @@
     "@rollup/plugin-typescript": "^8.2.0",
     "@types/jest": "^26.0.20",
     "@types/jsdom": "^16.2.6",
-    "@typescript-eslint/eslint-plugin": "^4.15.2",
-    "@typescript-eslint/parser": "^4.15.2",
+    "@types/node": "^14.14.31",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.21.0",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
@@ -61,15 +62,17 @@
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "standard-version": "^9.1.1",
-    "ts-jest": "^26.5.2",
+    "ts-jest": "^26.5.3",
     "tscpaths": "^0.0.9",
     "tsd": "^0.14.0",
     "tslib": "^2.1.0",
-    "typescript": "^4.2.2"
+    "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@types/node": "^14.14.31",
     "ajv": "^7.1.1",
     "extra-dom": "^0.2.12"
+  },
+  "peerDependencies": {
+    "@types/node": "^14.14.31"
   }
 }
