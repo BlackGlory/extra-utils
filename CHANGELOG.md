@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/BlackGlory/types/compare/v0.2.25...v0.3.0) (2021-03-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove isPromise, isPromiseLike, isntPromise, isntPromiseLike,
+       isDocument, isElement, isntDocument, isntElement,
+       isNodeJSWritableStream, isNodeReadableStream,
+       isntNodeJSWritableStream, isntNodeJSReadableStream
+
+### Features
+
+* move functions to extra-dom, extra-promise, extra-stream ([6e5b169](https://github.com/BlackGlory/types/commit/6e5b16950341270549b35b295c2c6551e12e454e))
+
 ### [0.2.25](https://github.com/BlackGlory/types/compare/v0.2.24...v0.2.25) (2021-03-05)
 
 ### [0.2.24](https://github.com/BlackGlory/types/compare/v0.2.23...v0.2.24) (2021-03-05)
