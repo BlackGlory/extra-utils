@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/BlackGlory/types/compare/v0.3.0...v0.3.1) (2021-03-06)
+
+
+### Features
+
+* add isDate, isntDate ([7f3df8b](https://github.com/BlackGlory/types/commit/7f3df8b334de32edc27bfae1505480572102ba9a))
+
 ## [0.3.0](https://github.com/BlackGlory/types/compare/v0.2.25...v0.3.0) (2021-03-05)
 
 
