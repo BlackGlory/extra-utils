@@ -1,5 +1,6 @@
 export * from './async-iterable'
 export * from './char'
+export * from './date'
 export * from './falsy'
 export * from './function'
 export * from './iterable'

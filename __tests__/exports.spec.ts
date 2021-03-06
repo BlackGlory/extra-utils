@@ -6,6 +6,8 @@ test('index', () => {
   , 'isCharPrimitive', 'isntCharPrimitive'
   , 'isCharObject', 'isntCharObject'
 
+  , 'isDate', 'isntDate'
+
   , 'isIterable', 'isntIterable'
   , 'isAsyncIterable', 'isntAsyncIterable'
 
