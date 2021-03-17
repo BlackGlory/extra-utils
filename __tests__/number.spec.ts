@@ -1,4 +1,4 @@
-import { isNumber } from '@guards/number'
+import { isNumber } from '@src/number'
 import 'jest-extended'
 
 describe('isNumber(val: unknown): val is number', () => {

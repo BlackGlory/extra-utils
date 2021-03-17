@@ -1,4 +1,4 @@
-import { Json } from '@interfaces/json'
+import { Json } from 'justypes'
 
 export function isJson(val: unknown): val is Json {
   try {

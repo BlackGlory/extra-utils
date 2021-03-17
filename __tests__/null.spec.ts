@@ -1,5 +1,5 @@
 import { expectType, expectNotType } from 'tsd'
-import { isNull, isntNull } from '@guards/null'
+import { isNull, isntNull } from '@src/null'
 import 'jest-extended'
 
 describe('isNull(val: unknown): val is null', () => {

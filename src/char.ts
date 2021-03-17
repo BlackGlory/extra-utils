@@ -1,5 +1,8 @@
-import { isString, isStringObject } from '@guards/string'
-import { Char, CharObject, CharPrimitive } from '@interfaces/char'
+import { isString, isStringObject } from '@src/string'
+
+export type Char = (string | String) & { length: 1}
+export type CharPrimitive = string & { length: 1}
+export type CharObject = String & { length: 1 }
 
 export function isChar(val: unknown): val is Char {
   return (isString(val) || isStringObject(val))

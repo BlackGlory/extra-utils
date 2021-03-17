@@ -1,5 +1,5 @@
-import { isntNull } from '@guards/null'
-import { isntUndefined } from '@guards/undefined'
+import { isntNull } from '@src/null'
+import { isntUndefined } from '@src/undefined'
 
 export function isIterable<T>(val: any): val is Iterable<T> {
   return isntNull(val)

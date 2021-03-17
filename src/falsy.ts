@@ -1,4 +1,4 @@
-import { Falsy } from '@interfaces/falsy'
+import { Falsy } from 'justypes'
 
 export function isFalsy(val: unknown): val is Falsy  {
   return !val
