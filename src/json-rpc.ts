@@ -1,10 +1,7 @@
 import Ajv from 'ajv'
 
-interface Dict<T> {
-  [key: string]: T
-}
 export type JsonRpcId = string | number
-export type JsonRpcParams<T> = T[] | Dict<T>
+export type JsonRpcParams<T> = T[] | { [key: string]: T }
 
 export type JsonRpc<T> =
 | JsonRpcNotification<T>
