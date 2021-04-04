@@ -20,6 +20,8 @@ test('index', () => {
 
   , 'isNumber', 'isntNumber'
 
+  , 'isBoolean', 'isntBoolean'
+
   , 'isObject', 'isntObject'
 
   , 'isFunction' , 'isntFunction'

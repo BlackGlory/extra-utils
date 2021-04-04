@@ -1,4 +1,5 @@
 export * from './async-iterable'
+export * from './boolean'
 export * from './char'
 export * from './date'
 export * from './falsy'
