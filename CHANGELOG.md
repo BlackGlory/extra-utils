@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/BlackGlory/types/compare/v0.4.1...v0.4.2) (2021-04-04)
+
+
+### Features
+
+* add isBoolean, isntBoolean ([c8740aa](https://github.com/BlackGlory/types/commit/c8740aa41215d63ef33adde44e81040125d127cc))
+
 ### [0.4.1](https://github.com/BlackGlory/types/compare/v0.4.0...v0.4.1) (2021-03-17)
 
 ## [0.4.0](https://github.com/BlackGlory/types/compare/v0.3.3...v0.4.0) (2021-03-17)
