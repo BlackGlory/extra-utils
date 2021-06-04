@@ -2,7 +2,9 @@ import * as index from '@src/index'
 
 test('index', () => {
   const expected = [
-    'isChar', 'isntChar'
+    'isArray', 'isntArray'
+
+  , 'isChar', 'isntChar'
   , 'isCharPrimitive', 'isntCharPrimitive'
   , 'isCharObject', 'isntCharObject'
 

@@ -1,3 +1,4 @@
+export * from './array'
 export * from './async-iterable'
 export * from './boolean'
 export * from './char'
