@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/BlackGlory/types/compare/v0.4.2...v0.4.3) (2021-06-04)
+
+
+### Features
+
+* add isArray, isntArray ([a57e048](https://github.com/BlackGlory/types/commit/a57e0483021d486b109300eaad5249da2fcad90c))
+
+
+### Bug Fixes
+
+* isntIterable ([2c0e437](https://github.com/BlackGlory/types/commit/2c0e4370f3d1481a1d96d9bb16fd5074e8670148))
+
 ### [0.4.2](https://github.com/BlackGlory/types/compare/v0.4.1...v0.4.2) (2021-04-04)
 
 
