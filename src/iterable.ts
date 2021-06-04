@@ -7,6 +7,6 @@ export function isIterable<T>(val: any): val is Iterable<T> {
       && typeof val[Symbol.iterator] === 'function'
 }
 
-export function isntIterable<T>(val: unknown): val is Exclude<T, Iterable<unknown>> {
+export function isntIterable<T>(val: T): val is Exclude<T, Iterable<unknown>> {
   return !isIterable(val)
 }
