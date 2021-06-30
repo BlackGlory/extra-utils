@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.5](https://github.com/BlackGlory/types/compare/v0.4.4...v0.4.5) (2021-06-30)
+
+
+### Bug Fixes
+
+* inEnum ([bff8c7c](https://github.com/BlackGlory/types/commit/bff8c7c47da1564b983e7b21abc276314c395295))
+
 ### [0.4.4](https://github.com/BlackGlory/types/compare/v0.4.3...v0.4.4) (2021-06-30)
 
 
