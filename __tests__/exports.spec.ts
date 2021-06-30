@@ -11,6 +11,8 @@ test('index', () => {
 
   , 'isDate', 'isntDate'
 
+  , 'inEnum'
+
   , 'isIterable', 'isntIterable'
   , 'isAsyncIterable', 'isntAsyncIterable'
 
