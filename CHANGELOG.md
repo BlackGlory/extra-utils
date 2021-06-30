@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/BlackGlory/types/compare/v0.4.3...v0.4.4) (2021-06-30)
+
+
+### Features
+
+* add inEnum ([c1a0736](https://github.com/BlackGlory/types/commit/c1a07364792242894a4d1d3dd1e24838e6e9844b))
+* add isEmptyArray, isntEmptyArray ([a47d6f8](https://github.com/BlackGlory/types/commit/a47d6f80339bf2288a8e2c5b5a7d2c3ca6302850))
+* add isEmptyObject, isntEmptyObject ([9c430ad](https://github.com/BlackGlory/types/commit/9c430addea77b02df9df5801d27916c72ed1baff))
+
 ### [0.4.3](https://github.com/BlackGlory/types/compare/v0.4.2...v0.4.3) (2021-06-04)
 
 
