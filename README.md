@@ -1,6 +1,6 @@
 # types
 
-Common types and type guards without magic
+Type guards for JavaScript and Typescript.
 
 ## Install
 
