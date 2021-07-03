@@ -1,128 +1,46 @@
-import Ajv from 'ajv'
+import { isArray } from './array'
+import { isRecord, isObject } from './object'
+import { isString } from './string'
+import { isNumber } from './number'
+import { isUndefined, isntUndefined } from './undefined'
+import {
+  JsonRpcId
+, JsonRpcParams
+, JsonRpcNotification
+, JsonRpcRequest
+, JsonRpcSuccess
+, JsonRpcError
+, JsonRpcErrorObject
+} from 'justypes'
 
-export type JsonRpcId = string | number
-export type JsonRpcParams<T> = T[] | { [key: string]: T }
-
-export type JsonRpc<T> =
-| JsonRpcNotification<T>
-| JsonRpcRequest<T>
-| JsonRpcResponse<T>
-
-export type JsonRpcResponse<T> =
-| JsonRpcSuccess<T>
-| JsonRpcError<T>
-
-export interface JsonRpcNotification<T> {
-  jsonrpc: '2.0'
-  method: string
-  params?: JsonRpcParams<T>
+function isJsonRpcId(val: unknown): val is JsonRpcId {
+  return isString(val) || isNumber(val)
 }
 
-export interface JsonRpcRequest<T> {
-  jsonrpc: '2.0'
-  id: JsonRpcId
-  method: string
-  params?: JsonRpcParams<T>
+function isJsonRpcParams<T>(val: unknown): val is JsonRpcParams<T> {
+  return isArray(val) || isObject(val)
 }
-
-export interface JsonRpcSuccess<T> {
-  jsonrpc: '2.0'
-  id: JsonRpcId
-  result: T
-}
-
-export interface JsonRpcErrorObject<T> {
-  code: number
-  message: string
-  data?: T
-}
-
-export interface JsonRpcError<T> {
-  jsonrpc: '2.0'
-  id: JsonRpcId
-  error: JsonRpcErrorObject<T>
-}
-
-const JsonRpcIdSchema = {
-  oneOf: [
-    { type: 'string' }
-  , { type: 'number' }
-  ]
-}
-
-const JsonRpcParamsSchema = {
-  oneOf: [
-    { type: 'array' }
-  , { type: 'object' }
-  ]
-}
-
-const JsonRpcNotificationSchema = {
-  type: 'object'
-, properties: {
-    jsonrpc: { type: 'string' }
-  , method: { type: 'string' }
-  , params: JsonRpcParamsSchema
-  , id: false
-  }
-, required: ['jsonrpc', 'method']
-}
-
-const JsonRpcRequestSchema = {
-  type: 'object'
-, properties: {
-    jsonrpc: { type: 'string' }
-  , id: JsonRpcIdSchema
-  , method: { type: 'string' }
-  , params: JsonRpcParamsSchema
-  }
-, required: ['jsonrpc', 'id', 'method']
-}
-
-const JsonRpcSuccessSchema = {
-  type: 'object'
-, properties: {
-    jsonrpc: { type: 'string' }
-  , id: JsonRpcIdSchema
-  , result: {}
-  }
-, required: ['jsonrpc', 'id', 'result']
-}
-
-const JsonRpcErrorObjectSchema = {
-  type: 'object'
-, properties: {
-    code: { type: 'number' }
-  , message: { type: 'string' }
-  , data: {}
-  }
-, required: ['code', 'message']
-}
-
-const JsonRpcErrorSchema = {
-  type: 'object'
-, properties: {
-    jsonrpc: { type: 'string' }
-  , id: JsonRpcIdSchema
-  , error: JsonRpcErrorObjectSchema
-  }
-, required: ['jsonrpc', 'id', 'error']
-}
-
-let ajv: Ajv
 
 export function isJsonRpcNotification<T>(val: unknown): val is JsonRpcNotification<T> {
-  if (!ajv) ajv = new Ajv()
-  return ajv.validate(JsonRpcNotificationSchema, val)
+  return isRecord(val)
+      && isString(val.jsonrpc)
+      && isString(val.method)
+      && isUndefined(val.id)
+      && isJsonRpcParams(val.params)
 }
 
-export function isntJsonRpcNotification<T>(val: T): val is Exclude<T, JsonRpcNotification<unknown>> {
+export function isntJsonRpcNotification<T>(
+  val: T
+): val is Exclude<T, JsonRpcNotification<unknown>> {
   return !isJsonRpcNotification(val)
 }
 
 export function isJsonRpcRequest<T>(val: unknown): val is JsonRpcRequest<T> {
-  if (!ajv) ajv = new Ajv()
-  return ajv.validate(JsonRpcRequestSchema, val)
+  return isRecord(val)
+      && isString(val.jsonrpc)
+      && isString(val.method)
+      && isJsonRpcId(val.id)
+      && isJsonRpcParams(val.params)
 }
 
 export function isntJsonRpcRequest<T>(val: T): val is Exclude<T, JsonRpcRequest<unknown>> {
@@ -130,8 +48,10 @@ export function isntJsonRpcRequest<T>(val: T): val is Exclude<T, JsonRpcRequest<
 }
 
 export function isJsonRpcSuccess<T>(val: unknown): val is JsonRpcSuccess<T> {
-  if (!ajv) ajv = new Ajv()
-  return ajv.validate(JsonRpcSuccessSchema, val)
+  return isRecord(val)
+      && isString(val.jsonrpc)
+      && isString(val.id)
+      && isntUndefined(val.result)
 }
 
 export function isntJsonRpcSuccess<T>(val: T): val is Exclude<T, JsonRpcSuccess<unknown>> {
@@ -139,10 +59,19 @@ export function isntJsonRpcSuccess<T>(val: T): val is Exclude<T, JsonRpcSuccess<
 }
 
 export function isJsonRpcError<T>(val: unknown): val is JsonRpcError<T> {
-  if (!ajv) ajv = new Ajv()
-  return ajv.validate(JsonRpcErrorSchema, val)
+  return isRecord(val)
+      && isString(val.jsonrpc)
+      && isJsonRpcId(val.id)
+      && isJsonRpcErrorObject(val.error)
 }
 
 export function isntJsonRpcError<T>(val: T): val is Exclude<T, JsonRpcError<unknown>> {
   return !isJsonRpcError(val)
+}
+
+function isJsonRpcErrorObject<T>(val: unknown): val is JsonRpcErrorObject<T> {
+  return isRecord(val)
+      && isNumber(val.code)
+      && isString(val.message)
+      && (isUndefined(val.data) || isObject(val.data))
 }

@@ -28,6 +28,7 @@ test('index', () => {
   , 'isBoolean', 'isntBoolean'
 
   , 'isObject', 'isntObject'
+  , 'isRecord'
   , 'isEmptyObject', 'isntEmptyObject'
 
   , 'isFunction' , 'isntFunction'
