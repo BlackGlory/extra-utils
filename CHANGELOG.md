@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.7](https://github.com/BlackGlory/types/compare/v0.4.6...v0.4.7) (2021-07-10)
+
+
+### Features
+
+* add isBigInt, isntBigInt ([1c66209](https://github.com/BlackGlory/types/commit/1c662092f2d05963696c99325f35b121a78cbddd))
+
 ### [0.4.6](https://github.com/BlackGlory/types/compare/v0.4.5...v0.4.6) (2021-07-03)
 
 ### [0.4.5](https://github.com/BlackGlory/types/compare/v0.4.4...v0.4.5) (2021-06-30)
