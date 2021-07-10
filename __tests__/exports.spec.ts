@@ -5,6 +5,8 @@ test('index', () => {
     'isArray', 'isntArray'
   , 'isEmptyArray', 'isntEmptyArray'
 
+  , 'isBigInt', 'isntBigInt'
+
   , 'isChar', 'isntChar'
   , 'isCharPrimitive', 'isntCharPrimitive'
   , 'isCharObject', 'isntCharObject'

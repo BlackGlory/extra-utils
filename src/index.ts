@@ -1,5 +1,6 @@
 export * from './array'
 export * from './async-iterable'
+export * from './bigint'
 export * from './boolean'
 export * from './char'
 export * from './date'
