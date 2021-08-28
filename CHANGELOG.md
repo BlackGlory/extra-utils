@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/BlackGlory/types/compare/v0.4.7...v0.5.0) (2021-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* - `isCharPrimitive` is removed
+- `isntCharPrimitive` is removed
+- `isCharObject` is removed
+- `isntCharObject`
+- `isStringPrimitive` is removed
+- `isntStringPrimitive` is removed
+- `isStringObject` is removed
+- `isntStringObject` is removed
+
+### Features
+
+* remove unused functions ([5bd4704](https://github.com/BlackGlory/types/commit/5bd4704ecd172031eca852e5594ae0fb1779159a))
+
 ### [0.4.7](https://github.com/BlackGlory/types/compare/v0.4.6...v0.4.7) (2021-07-10)
 
 

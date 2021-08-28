@@ -1,6 +1,6 @@
 {
   "name": "@blackglory/types",
-  "version": "0.4.7",
+  "version": "0.5.0",
   "description": "Type guards for JavaScript and Typescript.",
   "files": [
     "lib",
