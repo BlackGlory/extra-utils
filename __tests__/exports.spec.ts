@@ -8,8 +8,6 @@ test('index', () => {
   , 'isBigInt', 'isntBigInt'
 
   , 'isChar', 'isntChar'
-  , 'isCharPrimitive', 'isntCharPrimitive'
-  , 'isCharObject', 'isntCharObject'
 
   , 'isDate', 'isntDate'
 
@@ -22,8 +20,6 @@ test('index', () => {
   , 'isUndefined', 'isntUndefined'
 
   , 'isString', 'isntString'
-  , 'isStringPrimitive', 'isntStringPrimitive'
-  , 'isStringObject', 'isntStringObject'
 
   , 'isNumber', 'isntNumber'
 
