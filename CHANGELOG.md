@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/BlackGlory/types/compare/v0.5.0...v0.5.1) (2021-09-22)
+
+
+### Features
+
+* add isError, isntError ([2d9e40f](https://github.com/BlackGlory/types/commit/2d9e40fa43af128311723454381d59726c68db49))
+
 ## [0.5.0](https://github.com/BlackGlory/types/compare/v0.4.7...v0.5.0) (2021-08-28)
 
 
