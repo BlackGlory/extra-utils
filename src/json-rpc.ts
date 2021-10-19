@@ -2,7 +2,7 @@ import { isArray } from './array'
 import { isRecord, isObject } from './object'
 import { isString } from './string'
 import { isNumber } from './number'
-import { isUndefined, isntUndefined } from './undefined'
+import { isUndefined } from './undefined'
 import {
   JsonRpcId
 , JsonRpcParams
@@ -51,7 +51,7 @@ export function isJsonRpcSuccess<T>(val: unknown): val is JsonRpcSuccess<T> {
   return isRecord(val)
       && isString(val.jsonrpc)
       && isString(val.id)
-      && isntUndefined(val.result)
+      && 'result' in val
 }
 
 export function isntJsonRpcSuccess<T>(val: T): val is Exclude<T, JsonRpcSuccess<unknown>> {

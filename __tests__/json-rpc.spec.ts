@@ -55,59 +55,78 @@ describe('isJsonRpcRequest', () => {
 })
 
 describe('isJsonRpcSuccess', () => {
-  it('return true', () => {
-    const obj = {
-      jsonrpc: '2.0'
-    , id: 'id'
-    , result: 'result'
-    }
+  describe('result exists', () => {
+    it('return true', () => {
+      const obj = {
+        jsonrpc: '2.0'
+      , id: 'id'
+      , result: undefined
+      }
 
-    const result = isJsonRpcSuccess(obj)
+      const result = isJsonRpcSuccess(obj)
 
-    expect(result).toBe(true)
+      expect(result).toBe(true)
+    })
   })
 
-  it('return false', () => {
-    const obj = {
-      jsonrpc: '2.0'
-    , id: 'id'
-    , error: {
-        code: 0
-      , message: 'message'
+  describe('result does not exist', () => {
+    it('return false', () => {
+      const obj = {
+        jsonrpc: '2.0'
+      , id: 'id'
       }
-    }
 
-    const result = isJsonRpcSuccess(obj)
+      const result = isJsonRpcSuccess(obj)
 
-    expect(result).toBe(false)
+      expect(result).toBe(false)
+    })
   })
 })
 
 describe('isJsonRpcError', () => {
-  it('return true', () => {
-    const obj = {
-      jsonrpc: '2.0'
-    , id: 'id'
-    , error: {
-        code: 0
-      , message: 'message'
-      }
-    }
+  describe('error exists', () => {
+    describe('error structure is legal', () => {
+      it('return true', () => {
+        const obj = {
+          jsonrpc: '2.0'
+        , id: 'id'
+        , error: {
+            code: 0
+          , message: 'message'
+          }
+        }
 
-    const result = isJsonRpcError(obj)
+        const result = isJsonRpcError(obj)
 
-    expect(result).toBe(true)
+        expect(result).toBe(true)
+      })
+    })
+
+    describe('error sturcture is illegal', () => {
+      it('return false', () => {
+        const obj = {
+          jsonrpc: '2.0'
+        , id: 'id'
+        , error: { code: 0 }
+        }
+
+        const result = isJsonRpcError(obj)
+
+        expect(result).toBe(false)
+      })
+    })
   })
+  
+  describe('error does not exist', () => {
+    it('return false', () => {
+      const obj = {
+        jsonrpc: '2.0'
+      , id: 'id'
+      }
 
-  it('return false', () => {
-    const obj = {
-      jsonrpc: '2.0'
-    , id: 'id'
-    , result: 'result'
-    }
+      const result = isJsonRpcError(obj)
 
-    const result = isJsonRpcError(obj)
-
-    expect(result).toBe(false)
+      expect(result).toBe(false)
+    })
   })
 })
