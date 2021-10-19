@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/BlackGlory/types/compare/v0.5.1...v0.5.2) (2021-10-19)
+
+
+### Features
+
+* improve isJsonRpcSuccess ([2fe1247](https://github.com/BlackGlory/types/commit/2fe1247c22a7e3f0406a8938f640fc49c2b2e603))
+
 ### [0.5.1](https://github.com/BlackGlory/types/compare/v0.5.0...v0.5.1) (2021-09-22)
 
 
