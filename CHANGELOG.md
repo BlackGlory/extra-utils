@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/BlackGlory/types/compare/v0.5.2...v0.6.0) (2021-12-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* - `isRecord` removed.
+- The signatures of `isEmptyObject`, `isntEmptyObject` changed.
+
+### Features
+
+* add isPlainObject, isntPlainObject ([13ce952](https://github.com/BlackGlory/types/commit/13ce952a69fa59e079389f5099d3faa60cde1d96))
+
 ### [0.5.2](https://github.com/BlackGlory/types/compare/v0.5.1...v0.5.2) (2021-10-19)
 
 
