@@ -1,5 +1,5 @@
 import { isArray } from './array'
-import { isRecord, isObject } from './object'
+import { isPlainObject, isObject } from './object'
 import { isString } from './string'
 import { isNumber } from './number'
 import { isUndefined } from './undefined'
@@ -22,7 +22,7 @@ function isJsonRpcParams<T>(val: unknown): val is JsonRpcParams<T> {
 }
 
 export function isJsonRpcNotification<T>(val: unknown): val is JsonRpcNotification<T> {
-  return isRecord(val)
+  return isPlainObject(val)
       && isString(val.jsonrpc)
       && isString(val.method)
       && isUndefined(val.id)
@@ -36,7 +36,7 @@ export function isntJsonRpcNotification<T>(
 }
 
 export function isJsonRpcRequest<T>(val: unknown): val is JsonRpcRequest<T> {
-  return isRecord(val)
+  return isPlainObject(val)
       && isString(val.jsonrpc)
       && isString(val.method)
       && isJsonRpcId(val.id)
@@ -48,7 +48,7 @@ export function isntJsonRpcRequest<T>(val: T): val is Exclude<T, JsonRpcRequest<
 }
 
 export function isJsonRpcSuccess<T>(val: unknown): val is JsonRpcSuccess<T> {
-  return isRecord(val)
+  return isPlainObject(val)
       && isString(val.jsonrpc)
       && isString(val.id)
       && 'result' in val
@@ -59,7 +59,7 @@ export function isntJsonRpcSuccess<T>(val: T): val is Exclude<T, JsonRpcSuccess<
 }
 
 export function isJsonRpcError<T>(val: unknown): val is JsonRpcError<T> {
-  return isRecord(val)
+  return isPlainObject(val)
       && isString(val.jsonrpc)
       && isJsonRpcId(val.id)
       && isJsonRpcErrorObject(val.error)
@@ -70,7 +70,7 @@ export function isntJsonRpcError<T>(val: T): val is Exclude<T, JsonRpcError<unkn
 }
 
 function isJsonRpcErrorObject<T>(val: unknown): val is JsonRpcErrorObject<T> {
-  return isRecord(val)
+  return isPlainObject(val)
       && isNumber(val.code)
       && isString(val.message)
       && (isUndefined(val.data) || isObject(val.data))
