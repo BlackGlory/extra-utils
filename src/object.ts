@@ -1,8 +1,9 @@
-export function isObject(val: unknown): val is object {
-  return val !== null && typeof val === 'object'
+export function isObject(val: unknown): val is Record<string | symbol | number, unknown> {
+  return val !== null
+      && typeof val === 'object'
 }
 
-export function isntObject<T>(val: T): val is Exclude<T, object> {
+export function isntObject<T>(val: T): val is Exclude<T, Record<string | symbol | number, unknown>> {
   return !isObject(val)
 }
 
