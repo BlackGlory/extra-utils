@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.3](https://github.com/BlackGlory/types/compare/v0.6.2...v0.6.3) (2021-12-16)
+
+
+### Features
+
+* improve type assertions ([6043e3d](https://github.com/BlackGlory/types/commit/6043e3dd565130e3a0086204f61e2e985bc3332c))
+
 ### [0.6.2](https://github.com/BlackGlory/types/compare/v0.6.1...v0.6.2) (2021-12-16)
 
 ### [0.6.1](https://github.com/BlackGlory/types/compare/v0.6.0...v0.6.1) (2021-12-16)
