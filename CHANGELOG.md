@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.4](https://github.com/BlackGlory/types/compare/v0.6.3...v0.6.4) (2021-12-17)
+
+
+### Features
+
+* improve parameters ([3e445d0](https://github.com/BlackGlory/types/commit/3e445d0d1520897bda0b1ef0d5b5d00091f025b7))
+
 ### [0.6.3](https://github.com/BlackGlory/types/compare/v0.6.2...v0.6.3) (2021-12-16)
 
 
