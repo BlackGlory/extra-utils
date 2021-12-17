@@ -19,10 +19,10 @@ export function isntPlainObject<T>(val: T): val is Exclude<T, object & Record<st
   return !isPlainObject(val)
 }
 
-export function isEmptyObject(val: Record<string | symbol | number, unknown>): boolean {
+export function isEmptyObject(val: object): boolean {
   return Object.keys(val).length === 0
 }
 
-export function isntEmptyObject(val: Record<string | symbol | number, unknown>): boolean {
+export function isntEmptyObject(val: object): boolean {
   return Object.keys(val).length !== 0
 }
