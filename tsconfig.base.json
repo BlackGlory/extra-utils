@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2019"
+    "target": "ES2018"
   , "module": "CommonJS"
   , "strict": true
   , "noUnusedLocals": true
@@ -9,8 +9,6 @@
   , "baseUrl": "."
   , "paths": {
       "@src/*": ["src/*"]
-    , "@guards/*": ["src/guards/*"]
-    , "@interfaces/*": ["src/interfaces/*"]
     , "@test/*": ["__tests__/*"]
     }
   }
