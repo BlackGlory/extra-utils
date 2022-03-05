@@ -29,6 +29,9 @@ test('index', () => {
   , 'isPlainObject', 'isntPlainObject'
   , 'isEmptyObject', 'isntEmptyObject'
 
+  , 'isPromise', 'isntPromise'
+  , 'isPromiseLike', 'isntPromiseLike'
+
   , 'isFunction' , 'isntFunction'
 
   , 'isJson', 'isntJson'
