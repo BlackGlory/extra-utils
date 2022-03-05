@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/BlackGlory/types/compare/v0.6.5...v1.0.0) (2022-03-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove isJsonRpcNotification, isntJsonRpcNotification,
+         isJsonRpcRequest, isntJsonRpcRequest, isJsonRpcSuccess,
+         isntJsonRpcSuccess, isJsonRpcError, isntJsonRpcError
+
+### Features
+
+* add isPromise, isntPromise, isPromiseLike, isntPromiseLike ([810f5ae](https://github.com/BlackGlory/types/commit/810f5ae160da6e9a232df58fd4cc9e6909085c16))
+* rewrite isJson, isntJson, add isJsonable, isntJsonable ([35a2242](https://github.com/BlackGlory/types/commit/35a224292c7c361e2239519397529a4d74104d13))
+
 ### [0.6.5](https://github.com/BlackGlory/types/compare/v0.6.4...v0.6.5) (2022-01-05)
 
 ### [0.6.4](https://github.com/BlackGlory/types/compare/v0.6.3...v0.6.4) (2021-12-17)
