@@ -16,6 +16,22 @@ describe('isJson', () => {
   test('RegExp', () => {
     expect(isJson(/\w/)).toBe(false)
   })
+
+  test('json array', () => {
+    expect(isJson(['foo'])).toBe(true)
+  })
+
+  test('non json array', () => {
+    expect(isJson([new Map()])).toBe(false)
+  })
+
+  test('plain object', () => {
+    expect(isJson({ foo: 'bar' })).toBe(true)
+  })
+
+  test('non plain object', () => {
+    expect(isJson({ foo: new Map() })).toBe(false)
+  })
 })
 
 describe('isJsonable', () => {
@@ -33,5 +49,21 @@ describe('isJsonable', () => {
 
   test('RegExp', () => {
     expect(isJsonable(/\w/)).toBe(true)
+  })
+
+  test('json array', () => {
+    expect(isJsonable(['foo'])).toBe(true)
+  })
+
+  test('non json array', () => {
+    expect(isJsonable([new Map()])).toBe(true)
+  })
+
+  test('plain object', () => {
+    expect(isJsonable({ foo: 'bar' })).toBe(true)
+  })
+
+  test('non plain object', () => {
+    expect(isJsonable({ foo: new Map() })).toBe(true)
   })
 })
