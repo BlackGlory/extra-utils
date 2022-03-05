@@ -1,10 +1,11 @@
 import { isntNull } from '@src/null'
 import { isntUndefined } from '@src/undefined'
+import { isFunction } from '@src/function'
 
-export function isIterable<T>(val: any): val is Iterable<T> {
+export function isIterable<T>(val: unknown): val is Iterable<T> {
   return isntNull(val)
       && isntUndefined(val)
-      && typeof val[Symbol.iterator] === 'function'
+      && isFunction((val as any)[Symbol.iterator])
 }
 
 export function isntIterable<T>(val: T): val is Exclude<T, Iterable<unknown>> {

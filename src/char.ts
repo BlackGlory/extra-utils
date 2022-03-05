@@ -1,12 +1,10 @@
 import { isString } from '@src/string'
 
-export type Char = string & { length: 1 }
-
-export function isChar(val: unknown): val is Char {
+export function isChar(val: unknown): val is string {
   return isString(val)
       && val.length === 1
 }
 
-export function isntChar<T>(val: T): val is Exclude<T, Char> {
+export function isntChar(val: unknown): boolean {
   return !isChar(val)
 }

@@ -35,11 +35,7 @@ test('index', () => {
   , 'isFunction' , 'isntFunction'
 
   , 'isJson', 'isntJson'
-
-  , 'isJsonRpcNotification', 'isntJsonRpcNotification'
-  , 'isJsonRpcRequest', 'isntJsonRpcRequest'
-  , 'isJsonRpcSuccess', 'isntJsonRpcSuccess'
-  , 'isJsonRpcError', 'isntJsonRpcError'
+  , 'isJsonable', 'isntJsonable'
 
   , 'isFalsy', 'isntFalsy'
 

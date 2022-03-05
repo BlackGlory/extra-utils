@@ -1,7 +1,7 @@
 import { isObject } from './object'
 import { isFunction } from './function'
 
-export function isPromise<T>(val: any): val is Promise<T> {
+export function isPromise<T>(val: unknown): val is Promise<T> {
   return val instanceof Promise
 }
 
@@ -13,7 +13,7 @@ export function isntPromiseLike<T>(val: T): val is Exclude<T, PromiseLike<unknow
   return !isPromiseLike(val)
 }
 
-export function isPromiseLike<T>(val: any): val is PromiseLike<T> {
+export function isPromiseLike<T>(val: unknown): val is PromiseLike<T> {
   return isObject(val)
       && isFunction(val.then)
 }
