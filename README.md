@@ -9,7 +9,7 @@ yarn add @blackglory/types
 ```
 
 ## API
-```
+```ts
 function isArray<T>(val: unknown): val is Array<T>
 function isntArray<T>(val: T): val is Exclude<T, Array<unknown>>
 
