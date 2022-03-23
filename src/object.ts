@@ -1,4 +1,4 @@
-import isPlainObjectByLodash from 'lodash.isplainobject'
+import isPlainObjectByLodash from 'lodash/isPlainObject'
 
 export function isObject(val: unknown): val is object & Record<string | symbol | number, unknown> {
   return val !== null
