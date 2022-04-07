@@ -58,6 +58,12 @@ function isntNull<T>(val: T): val is Exclude<T, null>
 function isNumber(val: unknown): val is number
 function isntNumber<T>(val: T): val is Exclude<T, number>
 
+function isFinite(val: number): boolean
+function isPositiveInfinity(val: number): boolean
+function isNegativeInfinity(val: number): boolean
+function isNaN(val: number): boolean
+function isntNaN(val: number): boolean
+
 function isObject(val: unknown): val is object & Record<string | symbol | number, unknown>
 function isntObject<T>(val: T): val is Exclude<T, object & Record<string | symbol | number, unknown>>
 

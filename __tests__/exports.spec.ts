@@ -22,6 +22,8 @@ test('index', () => {
   , 'isString', 'isntString'
 
   , 'isNumber', 'isntNumber'
+  , 'isFinite', 'isPositiveInfinity', 'isNegativeInfinity'
+  , 'isNaN', 'isntNaN'
 
   , 'isBoolean', 'isntBoolean'
 
