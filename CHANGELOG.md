@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/BlackGlory/types/compare/v1.0.1...v1.1.0) (2022-04-07)
+
+
+### Features
+
+* add isFinity, isPositiveInfinity, isNegativeInfinity, isNaN, isntNaN ([d0f2fc5](https://github.com/BlackGlory/types/commit/d0f2fc5baf4de93bf698b80211323dd8d2013637))
+
 ### [1.0.1](https://github.com/BlackGlory/types/compare/v1.0.0...v1.0.1) (2022-03-23)
 
 ## [1.0.0](https://github.com/BlackGlory/types/compare/v0.6.5...v1.0.0) (2022-03-05)
