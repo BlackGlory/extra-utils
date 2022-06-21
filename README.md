@@ -86,4 +86,7 @@ function isUndefined(val: unknown): val is undefined
 function isntUndefined<T>(val: T): val is Exclude<T, undefined>
 
 function isAbsoluteURL(str: string): boolean
+
+function isRegExp(val: unknown): val is RegExp
+function isntRegExp<T>(val: T): val is Exclude<T, RegExp>
 ```
