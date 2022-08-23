@@ -27,7 +27,7 @@ describe('isntRegExp(val: unknown): boolean', () => {
     expect(result).toBe(true)
   })
 
-  test('error', () => {
+  test('regexp', () => {
     const val = /^.*$/
 
     const result = isntRegExp(val)

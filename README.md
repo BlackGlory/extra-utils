@@ -89,4 +89,7 @@ function isAbsoluteURL(str: string): boolean
 
 function isRegExp(val: unknown): val is RegExp
 function isntRegExp<T>(val: T): val is Exclude<T, RegExp>
+
+function isSymbol(val: unknown): val is symbol
+function isntSymbol<T>(val: T): val is Exclude<T, symbol>
 ```

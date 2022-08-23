@@ -46,6 +46,8 @@ test('index', () => {
   , 'isError', 'isntError'
 
   , 'isRegExp', 'isntRegExp'
+
+  , 'isSymbol', 'isntSymbol'
   ].sort()
 
   const result = Object.keys(index).sort()
