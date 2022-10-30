@@ -55,6 +55,9 @@ function isntJsonable<T>(val: T): boolean
 function isNull(val: unknown): val is null
 function isntNull<T>(val: T): val is Exclude<T, null>
 
+function isNullish(val: unknown): val is Nullish
+function isntNullish<T>(val: T): val is Exclude<T, Nullish>
+
 function isNumber(val: unknown): val is number
 function isntNumber<T>(val: T): val is Exclude<T, number>
 

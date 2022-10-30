@@ -18,6 +18,7 @@ test('index', () => {
 
   , 'isNull', 'isntNull'
   , 'isUndefined', 'isntUndefined'
+  , 'isNullish', 'isntNullish'
 
   , 'isString', 'isntString'
 
