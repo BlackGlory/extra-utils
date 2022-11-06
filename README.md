@@ -25,8 +25,15 @@ function isAsyncIterable<T>(val: unknown): val is AsyncIterable<T>
 function isntAsyncIterable<T>(val: T): val is Exclude<T, AsyncIterable<unknown>>
 ```
 
-### BigInt
+### Number, BigInt
 ```ts
+function isNumber(val: unknown): val is number
+function isntNumber<T>(val: T): val is Exclude<T, number>
+function isFinite(val: number): boolean
+function isPositiveInfinity(val: number): boolean
+function isNegativeInfinity(val: number): boolean
+function isNaN(val: number): boolean
+function isntNaN(val: number): boolean
 function isBigInt(val: unknown): val is bigint
 function isntBigInt<T>(val: T): val is Exclude<T, bigint>
 ```
@@ -92,17 +99,6 @@ function isntNull<T>(val: T): val is Exclude<T, null>
 function isUndefined(val: unknown): val is undefined
 function isntUndefined<T>(val: T): val is Exclude<T, undefined>
 
-```
-
-### Number
-```ts
-function isNumber(val: unknown): val is number
-function isntNumber<T>(val: T): val is Exclude<T, number>
-function isFinite(val: number): boolean
-function isPositiveInfinity(val: number): boolean
-function isNegativeInfinity(val: number): boolean
-function isNaN(val: number): boolean
-function isntNaN(val: number): boolean
 ```
 
 ### Object
