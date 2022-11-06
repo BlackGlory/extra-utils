@@ -1,11 +1,11 @@
-# types
-Type guards for JavaScript and Typescript.
+# extra-utils
+Utilities for JavaScript and Typescript.
 
 ## Install
 ```sh
-npm install --save @blackglory/types
+npm install --save extra-utils
 # or
-yarn add @blackglory/types
+yarn add extra-utils
 ```
 
 ## API
