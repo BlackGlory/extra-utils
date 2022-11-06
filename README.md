@@ -17,8 +17,10 @@ function isEmptyArray(val: unknown[]): boolean
 function isntEmptyArray<T>(val: T[]): val is NonEmptyArray<T>
 ```
 
-### AsyncIterable
+### Iterable, AsyncIterable
 ```ts
+function isIterable<T>(val: unknown): val is Iterable<T>
+function isntIterable<T>(val: T): val is Exclude<T, Iterable<unknown>>
 function isAsyncIterable<T>(val: unknown): val is AsyncIterable<T>
 function isntAsyncIterable<T>(val: T): val is Exclude<T, AsyncIterable<unknown>>
 ```
