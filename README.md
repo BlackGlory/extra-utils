@@ -84,12 +84,6 @@ function isntDate<T>(val: T): val is Exclude<T, Date>
 function inEnum<T>(val: unknown, _enum: object): val is T
 ```
 
-### Error
-```ts
-function isError(val: unknown): val is Error
-function isntError<T>(val: T): val is Exclude<T, Error>
-```
-
 ### Function
 ```ts
 function isFunction<T extends Function = (...args: any[]) => any>(

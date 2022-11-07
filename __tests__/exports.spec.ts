@@ -37,8 +37,6 @@ test('index', () => {
 
   , 'isFalsy', 'isntFalsy'
 
-  , 'isError', 'isntError'
-
   , 'isRegExp', 'isntRegExp'
 
   , 'isSymbol', 'isntSymbol'
