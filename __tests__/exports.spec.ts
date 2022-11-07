@@ -2,15 +2,14 @@ import * as index from '@src/index'
 
 test('index', () => {
   const expected = [
-    'isArray', 'isntArray'
+    'pipe'
+
+  , 'isArray', 'isntArray'
   , 'isEmptyArray', 'isntEmptyArray'
 
   , 'isDate', 'isntDate'
 
   , 'inEnum'
-
-  , 'isIterable', 'isntIterable'
-  , 'isAsyncIterable', 'isntAsyncIterable'
 
   , 'isNull', 'isntNull'
   , 'isUndefined', 'isntUndefined'
@@ -26,22 +25,18 @@ test('index', () => {
   , 'isNaN', 'isntNaN'
 
   , 'isBoolean', 'isntBoolean'
+  , 'isFalsy', 'isntFalsy'
 
   , 'isObject', 'isntObject'
   , 'isPlainObject', 'isntPlainObject'
   , 'isEmptyObject', 'isntEmptyObject'
-
-  , 'isFunction' , 'isntFunction'
-
   , 'isJson', 'isntJson'
 
-  , 'isFalsy', 'isntFalsy'
+  , 'isFunction' , 'isntFunction'
 
   , 'isRegExp', 'isntRegExp'
 
   , 'isSymbol', 'isntSymbol'
-
-  , 'pipe'
   ].sort()
 
   const result = Object.keys(index).sort()
