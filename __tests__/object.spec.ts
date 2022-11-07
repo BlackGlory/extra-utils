@@ -1,4 +1,4 @@
-import { isObject, isPlainObject, isEmptyObject, isntEmptyObject } from '@src/object'
+import { isObject, isPlainObject, isEmptyObject, isntEmptyObject, isJson } from '@src/object'
 import { pass } from '@blackglory/pass'
 
 describe('isObject(val: unknown): boolean', () => {
@@ -134,5 +134,39 @@ describe('isntEmptyObject(val: object): boolean', () => {
     const result = isntEmptyObject(obj)
 
     expect(result).toBe(false)
+  })
+})
+
+describe('isJson', () => {
+  test('undefined', () => {
+    expect(isJson(undefined)).toBe(false)
+  })
+
+  test('null', () => {
+    expect(isJson(null)).toBe(true)
+  })
+
+  test('Date', () => {
+    expect(isJson(new Date())).toBe(false)
+  })
+
+  test('RegExp', () => {
+    expect(isJson(/\w/)).toBe(false)
+  })
+
+  test('json array', () => {
+    expect(isJson(['foo'])).toBe(true)
+  })
+
+  test('non json array', () => {
+    expect(isJson([new Map()])).toBe(false)
+  })
+
+  test('plain object', () => {
+    expect(isJson({ foo: 'bar' })).toBe(true)
+  })
+
+  test('non plain object', () => {
+    expect(isJson({ foo: new Map() })).toBe(false)
   })
 })

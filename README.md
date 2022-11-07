@@ -98,12 +98,6 @@ function isFunction<T extends Function = (...args: any[]) => any>(
 function isntFunction<T>(val: T): val is Exclude<T, Function>
 ```
 
-### JSON
-```ts
-function isJson(val: unknown): Json
-function isntJson<T>(val: T): val is Exclude<T, Json>
-```
-
 ### Nullish
 ```ts
 function isNullish(val: unknown): val is Nullish
@@ -134,6 +128,9 @@ function isntPlainObject<T>(
 
 function isEmptyObject(val: object): boolean
 function isntEmptyObject(val: object): boolean
+
+function isJson(val: unknown): Json
+function isntJson<T>(val: T): val is Exclude<T, Json>
 ```
 
 ### RegExp
