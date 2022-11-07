@@ -11,6 +11,14 @@ yarn add extra-utils
 ## API
 ### pipe
 ```ts
+function pipe<T, U, V>(
+  value: T
+, ...operators: [
+    (value: T) => U
+  , ...Array<(value: U) => U>
+  , (value: U) => V
+  ]
+): V
 function pipe<T, U>(
   value: T
 , ...operators: [
