@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/BlackGlory/extra-utils/compare/v3.0.0...v3.1.0) (2022-11-07)
+
+
+### Features
+
+* improve `pipe` ([ad1823c](https://github.com/BlackGlory/extra-utils/commit/ad1823c8c047571c7f064f56c8305dd435540dab))
+
 ## [3.0.0](https://github.com/BlackGlory/extra-utils/compare/v2.0.0...v3.0.0) (2022-11-07)
 
 
