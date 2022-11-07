@@ -18,6 +18,10 @@ function pipe<T, U>(
   , (value: T) => U
   ]
 ): U
+function pipe<T>(
+  value: T
+, ...operators: Array<(value: T) => T>
+): T
 ```
 
 ### Enum
