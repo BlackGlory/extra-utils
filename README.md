@@ -137,15 +137,6 @@ function isEmptyObject(val: object): boolean
 function isntEmptyObject(val: object): boolean
 ```
 
-### Promise
-```ts
-function isPromise<T>(val: unknown): val is Promise<T>
-function isntPromise<T>(val: T): val is Exclude<T, Promise<unknown>>
-
-function isntPromiseLike<T>(val: T): val is Exclude<T, PromiseLike<unknown>>
-function isPromiseLike<T>(val: unknown): val is PromiseLike<T>
-```
-
 ### URL
 ```ts
 function isAbsoluteURL(str: string): boolean
