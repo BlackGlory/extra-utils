@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/BlackGlory/extra-utils/compare/v1.4.0...v2.0.0) (2022-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Removed `isIterable`, `isAsyncIterable`, `isntIterable`, `isntAsyncIterable`
+* Removed `isJsonable`, `isntJsonable`
+* Renamed `isAbsoluteURL` to `isURL`
+* Removed `isPromise`, `isPromiseLike`, `isntPromise`, `isntPromiseLike`
+* Removed ES2015 support
+
+### Features
+
+* add `pipe` ([837ec79](https://github.com/BlackGlory/extra-utils/commit/837ec791520bea612b2945f10cc0a0cc92d09f48))
+
+
+* remove `isIterable`, `isAsyncIterable`, `isntIterable`, `isntAsyncIterable` ([47a2923](https://github.com/BlackGlory/extra-utils/commit/47a29231b042e20e7279fab9c0e2a66926708e8d))
+* remove `isJsonable`, `isntJsonable` ([35e2d5e](https://github.com/BlackGlory/extra-utils/commit/35e2d5e235748609d8dea6b8e684770e00f2c8cc))
+* remove `isPromise`, `isPromiseLike`, `isntPromise`, `isntPromiseLike` ([a3362f7](https://github.com/BlackGlory/extra-utils/commit/a3362f74d30a5a7c6adf97719132b167319ef152))
+* remove ES2015 support ([c13bca6](https://github.com/BlackGlory/extra-utils/commit/c13bca637ae94ec8e69ac78b187b0c3eee015fb5))
+* rename `isAbsoluteURL` to `isURL` ([757839e](https://github.com/BlackGlory/extra-utils/commit/757839e500ca732461b77e745692f16da4855d81))
+
 ## [1.4.0](https://github.com/BlackGlory/types/compare/v1.3.0...v1.4.0) (2022-10-30)
 
 
