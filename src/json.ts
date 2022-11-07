@@ -18,16 +18,3 @@ export function isJson(val: unknown): val is Json {
 export function isntJson<T>(val: T): val is Exclude<T, Json> {
   return !isJson(val)
 }
-
-export function isJsonable(val: unknown): boolean {
-  try {
-    JSON.stringify(val)
-    return true
-  } catch {
-    return false
-  }
-}
-
-export function isntJsonable<T>(val: T): boolean {
-  return !isntJsonable(val)
-}

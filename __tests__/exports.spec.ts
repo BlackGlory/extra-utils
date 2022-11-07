@@ -34,7 +34,6 @@ test('index', () => {
   , 'isFunction' , 'isntFunction'
 
   , 'isJson', 'isntJson'
-  , 'isJsonable', 'isntJsonable'
 
   , 'isFalsy', 'isntFalsy'
 

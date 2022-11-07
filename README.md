@@ -102,9 +102,6 @@ function isntFunction<T>(val: T): val is Exclude<T, Function>
 ```ts
 function isJson(val: unknown): Json
 function isntJson<T>(val: T): val is Exclude<T, Json>
-
-function isJsonable(val: unknown): boolean
-function isntJsonable<T>(val: T): boolean
 ```
 
 ### Nullish
