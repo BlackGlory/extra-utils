@@ -69,6 +69,8 @@ function isntString<T>(val: T): val is Exclude<T, string>
 
 function isChar(val: unknown): val is string
 function isntChar(val: unknown): boolean
+
+function isURL(str: string): boolean
 ```
 
 ### Date
@@ -135,11 +137,6 @@ function isntPlainObject<T>(
 
 function isEmptyObject(val: object): boolean
 function isntEmptyObject(val: object): boolean
-```
-
-### URL
-```ts
-function isAbsoluteURL(str: string): boolean
 ```
 
 ### RegExp

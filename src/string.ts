@@ -14,3 +14,12 @@ export function isChar(val: unknown): val is string {
 export function isntChar(val: unknown): boolean {
   return !isChar(val)
 }
+
+export function isURL(text: string): boolean {
+  try {
+    new URL(text)
+    return true
+  } catch {
+    return false
+  }
+}

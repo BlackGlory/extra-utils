@@ -5,10 +5,6 @@ test('index', () => {
     'isArray', 'isntArray'
   , 'isEmptyArray', 'isntEmptyArray'
 
-  , 'isBigInt', 'isntBigInt'
-
-  , 'isChar', 'isntChar'
-
   , 'isDate', 'isntDate'
 
   , 'inEnum'
@@ -20,8 +16,11 @@ test('index', () => {
   , 'isUndefined', 'isntUndefined'
   , 'isNullish', 'isntNullish'
 
+  , 'isChar', 'isntChar'
   , 'isString', 'isntString'
+  , 'isURL'
 
+  , 'isBigInt', 'isntBigInt'
   , 'isNumber', 'isntNumber'
   , 'isFinite', 'isPositiveInfinity', 'isNegativeInfinity'
   , 'isNaN', 'isntNaN'
@@ -39,8 +38,6 @@ test('index', () => {
 
   , 'isFalsy', 'isntFalsy'
 
-  , 'isAbsoluteURL'
-  
   , 'isError', 'isntError'
 
   , 'isRegExp', 'isntRegExp'

@@ -1,7 +1,7 @@
-import { isString } from '@src/string'
+import { isString, isURL } from '@src/string'
 import 'jest-extended'
 
-describe('isString(val: unknown): val is string', () => {
+describe('isString', () => {
   describe('string', () => {
     it('return true', () => {
       const val = 'str'
@@ -19,6 +19,28 @@ describe('isString(val: unknown): val is string', () => {
       const result = isString(val)
 
       expect(result).toBeFalse()
+    })
+  })
+})
+
+describe('isURL', () => {
+  describe('is url', () => {
+    it('return true', () => {
+      const str= 'https://example.com'
+
+      const result = isURL(str)
+
+      expect(result).toBe(true)
+    })
+  })
+
+  describe('isnt url', () => {
+    it('return false', () => {
+      const str= '.'
+
+      const result = isURL(str)
+
+      expect(result).toBe(false)
     })
   })
 })
