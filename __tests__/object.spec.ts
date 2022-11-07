@@ -1,7 +1,7 @@
 import { isObject, isPlainObject, isEmptyObject, isntEmptyObject, isJson } from '@src/object'
 import { pass } from '@blackglory/pass'
 
-describe('isObject(val: unknown): boolean', () => {
+describe('isObject', () => {
   test('plain object', () => {
     const val: any = {}
 
@@ -51,7 +51,7 @@ describe('isObject(val: unknown): boolean', () => {
   })
 })
 
-describe('isPlainObject(val: unknown): boolean', () => {
+describe('isPlainObject', () => {
   test('plain object', () => {
     const val: any = {}
 
@@ -101,7 +101,7 @@ describe('isPlainObject(val: unknown): boolean', () => {
   })
 })
 
-describe('isEmptyObject(val: object): boolean', () => {
+describe('isEmptyObject', () => {
   test('non-empty object', () => {
     const obj = { foo: 'bar' }
 
@@ -119,7 +119,7 @@ describe('isEmptyObject(val: object): boolean', () => {
   })
 })
 
-describe('isntEmptyObject(val: object): boolean', () => {
+describe('isntEmptyObject', () => {
   test('non-empty object', () => {
     const obj = { foo: 'bar' }
 

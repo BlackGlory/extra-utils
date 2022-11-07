@@ -1,6 +1,6 @@
 import { isRegExp, isntRegExp } from '@src/regexp'
 
-describe('isRegExp(val: unknown): boolean', () => {
+describe('isRegExp', () => {
   test('non-regexp', () => {
     const val = 'regexp'
 
@@ -18,7 +18,7 @@ describe('isRegExp(val: unknown): boolean', () => {
   })
 })
 
-describe('isntRegExp(val: unknown): boolean', () => {
+describe('isntRegExp', () => {
   test('non-regexp', () => {
     const val = 'regexp'
 

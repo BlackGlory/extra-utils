@@ -1,7 +1,7 @@
 import { isNumber, isFinite, isNegativeInfinity, isPositiveInfinity, isNaN } from '@src/number'
 import 'jest-extended'
 
-describe('isNumber(val: unknown): val is number', () => {
+describe('isNumber', () => {
   describe('number', () => {
     it('return true', () => {
       const val = 123

@@ -1,7 +1,7 @@
 import { expectType, expectNotType } from 'tsd'
 import { isEmptyArray, isntEmptyArray } from '@src/array'
 
-describe('isEmptyArray(val: unknown[]): boolean', () => {
+describe('isEmptyArray', () => {
   test('non-empty array', () => {
     const arr = [1]
 
@@ -19,7 +19,7 @@ describe('isEmptyArray(val: unknown[]): boolean', () => {
   })
 })
 
-describe('isntEmptyArray<T>(val: T[]): val is NonEmptyArray<T>', () => {
+describe('isntEmptyArray', () => {
   test('non-empty array', () => {
     const arr = [1]
 

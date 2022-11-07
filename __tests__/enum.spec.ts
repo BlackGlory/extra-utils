@@ -1,6 +1,6 @@
 import { inEnum } from '@src/enum'
 
-describe('inEnum(val: unknown, enum: object): boolean', () => {
+describe('inEnum', () => {
   test('in enum', () => {
     enum Enum { Foo = 'foo' }
     const value = 'foo'

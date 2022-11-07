@@ -1,7 +1,7 @@
 import { isBigInt } from '@src/bigint'
 import 'jest-extended'
 
-describe('isBigInt(val: unknown): val is bigint', () => {
+describe('isBigInt', () => {
   describe('bigint', () => {
     it('return true', () => {
       const val = BigInt(123)

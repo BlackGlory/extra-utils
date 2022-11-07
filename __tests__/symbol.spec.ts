@@ -1,6 +1,6 @@
 import { isSymbol, isntSymbol } from '@src/symbol'
 
-describe('isSymbol(val: unknown): boolean', () => {
+describe('isSymbol', () => {
   test('non-symbol', () => {
     const val = 'symbol'
 
@@ -18,7 +18,7 @@ describe('isSymbol(val: unknown): boolean', () => {
   })
 })
 
-describe('isntSymbol(val: unknown): boolean', () => {
+describe('isntSymbol', () => {
   test('non-symbol', () => {
     const val = 'symbol'
 
