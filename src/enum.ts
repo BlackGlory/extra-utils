@@ -4,3 +4,7 @@
 export function inEnum<T>(val: unknown, _enum: object): val is T {
   return Object.values(_enum).includes(val)
 }
+
+export function notInEnum<T, U>(val: T, _enum: object): val is Exclude<T, U> {
+  return !inEnum(val, _enum)
+}

@@ -1,25 +1,32 @@
-import { isNumber, isFinite, isNegativeInfinity, isPositiveInfinity, isNaN } from '@src/number'
+import {
+  isNumber
+, isntNumber
+, isFinite
+, isNegativeInfinity
+, isPositiveInfinity
+, isNaN
+, isntNaN
+} from '@src/number'
 import 'jest-extended'
 
-describe('isNumber', () => {
-  describe('number', () => {
-    it('return true', () => {
-      const val = 123
+describe.each([
+  ['isNumber', isNumber, true]
+, ['isntNumber', isntNumber, false]
+])('%s', (_, fn, positiveResult) => {
+  test('number', () => {
+    const value = 123
 
-      const result = isNumber(val)
+    const result = fn(value)
 
-      expect(result).toBeTrue()
-    })
+    expect(result).toBe(positiveResult)
   })
 
-  describe('number-like string', () => {
-    it('return false', () => {
-      const val = '123'
+  test('number-like string', () => {
+    const value = '123'
 
-      const result = isNumber(val)
+    const result = fn(value)
 
-      expect(result).toBeFalse()
-    })
+    expect(result).toBe(!positiveResult)
   })
 })
 
@@ -55,88 +62,54 @@ describe('isFinite', () => {
   })
 })
 
-describe('isNegativeInfinity', () => {
-  describe('finite', () => {
-    it('return false', () => {
-      const val = 123
+describe.each([
+  ['isPositiveInfinity', isPositiveInfinity, true]
+, ['isNegativeInfinity', isNegativeInfinity, false]
+])('%s', (_, fn, positiveResult) => {
+  test('finite', () => {
+    const val = 123
 
-      const result = isNegativeInfinity(val)
+    const result = fn(val)
 
-      expect(result).toBe(false)
-    })
+    expect(result).toBe(false)
   })
 
-  describe('Infinity', () => {
-    it('return false', () => {
-      const val = Infinity
+  test('Infinity', () => {
+    const val = Infinity
 
-      const result = isNegativeInfinity(val)
+    const result = fn(val)
 
-      expect(result).toBe(false)
-    })
+    expect(result).toBe(positiveResult)
   })
 
   describe('-Infinity', () => {
     it('return true', () => {
       const val = -Infinity
 
-      const result = isNegativeInfinity(val)
+      const result = fn(val)
 
-      expect(result).toBe(true)
+      expect(result).toBe(!positiveResult)
     })
   })
 })
 
-describe('isPositiveInfinity', () => {
-  describe('finite', () => {
-    it('return false', () => {
-      const val = 123
-
-      const result = isPositiveInfinity(val)
-
-      expect(result).toBe(false)
-    })
-  })
-
-  describe('Infinity', () => {
-    it('return true', () => {
-      const val = Infinity
-
-      const result = isPositiveInfinity(val)
-
-      expect(result).toBe(true)
-    })
-  })
-
-  describe('-Infinity', () => {
-    it('return false', () => {
-      const val = -Infinity
-
-      const result = isPositiveInfinity(val)
-
-      expect(result).toBe(false)
-    })
-  })
-})
-
-describe('isNaN', () => {
+describe.each([
+  ['isNaN', isNaN, true]
+, ['isntNaN', isntNaN, false]
+])('%s', (_, fn, positiveResult) => {
   describe('NaN', () => {
-    it('return true', () => {
-      const val = NaN
+    const value = NaN
 
-      const result = isNaN(val)
+    const result = fn(value)
 
-      expect(result).toBe(true)
-    })
+    expect(result).toBe(positiveResult)
   })
 
   describe('Infinity', () => {
-    it('return false', () => {
-      const val = Infinity
+    const value = Infinity
 
-      const result = isNaN(val)
+    const result = fn(value)
 
-      expect(result).toBe(false)
-    })
+    expect(result).toBe(!positiveResult)
   })
 })

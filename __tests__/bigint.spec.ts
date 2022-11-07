@@ -1,24 +1,23 @@
-import { isBigInt } from '@src/bigint'
+import { isBigInt, isntBigInt } from '@src/bigint'
 import 'jest-extended'
 
-describe('isBigInt', () => {
-  describe('bigint', () => {
-    it('return true', () => {
-      const val = BigInt(123)
+describe.each([
+  ['isBigInt', isBigInt, true]
+, ['isntBigInt', isntBigInt, false]
+])('%s', (_, fn, positiveResult) => {
+  test('bigint', () => {
+    const value = BigInt(123)
 
-      const result = isBigInt(val)
+    const result = fn(value)
 
-      expect(result).toBeTrue()
-    })
+    expect(result).toBe(positiveResult)
   })
 
-  describe('number', () => {
-    it('return false', () => {
-      const val = 123
+  test('number', () => {
+    const value = 123
 
-      const result = isBigInt(val)
+    const result = fn(value)
 
-      expect(result).toBeFalse()
-    })
+    expect(result).toBe(!positiveResult)
   })
 })

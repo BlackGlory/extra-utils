@@ -1,18 +1,18 @@
-import { isArray, isntArray, isEmptyArray, isntEmptyArray } from '@src/array'
+import { isBoolean, isntBoolean, isFalsy, isntFalsy } from '@src/boolean'
 
 describe.each([
-  ['isArray', isArray, true]
-, ['isntArray', isntArray, false]
+  ['isBoolean', isBoolean, true]
+, ['isntBoolean', isntBoolean, false]
 ])('%s', (_, fn, positiveResult) => {
-  test('array', () => {
-    const value: number[] = []
+  test('boolean', () => {
+    const value = false
 
     const result = fn(value)
 
     expect(result).toBe(positiveResult)
   })
 
-  test('non-array', () => {
+  test('non-boolean', () => {
     const value = null
 
     const result = fn(value)
@@ -22,19 +22,19 @@ describe.each([
 })
 
 describe.each([
-  ['isEmptyArray', isEmptyArray, true]
-, ['isntEmptyArray', isntEmptyArray, false]
+  ['isFalsy', isFalsy, true]
+, ['isntFalsy', isntFalsy, false]
 ])('%s', (_, fn, positiveResult) => {
-  test('empty array', () => {
-    const value: number[] = []
+  test('falsy', () => {
+    const value = ''
 
     const result = fn(value)
 
     expect(result).toBe(positiveResult)
   })
 
-  test('non-empty array', () => {
-    const value = [1]
+  test('non-falsy', () => {
+    const value = 'true'
 
     const result = fn(value)
 

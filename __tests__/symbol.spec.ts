@@ -1,37 +1,22 @@
 import { isSymbol, isntSymbol } from '@src/symbol'
 
-describe('isSymbol', () => {
-  test('non-symbol', () => {
-    const val = 'symbol'
-
-    const result = isSymbol(val)
-
-    expect(result).toBe(false)
-  })
-
+describe.each([
+  ['isSymbol', isSymbol, true]
+, ['isntSymbol', isntSymbol, false]
+])('%s', (_, fn, positiveResult) => {
   test('symbol', () => {
     const val = Symbol()
 
-    const result = isSymbol(val)
+    const result = fn(val)
 
-    expect(result).toBe(true)
+    expect(result).toBe(positiveResult)
   })
-})
 
-describe('isntSymbol', () => {
   test('non-symbol', () => {
     const val = 'symbol'
 
-    const result = isntSymbol(val)
+    const result = fn(val)
 
-    expect(result).toBe(true)
-  })
-
-  test('symbol', () => {
-    const val = Symbol()
-
-    const result = isntSymbol(val)
-
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 })

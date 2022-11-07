@@ -1,172 +1,207 @@
-import { isObject, isPlainObject, isEmptyObject, isntEmptyObject, isJson } from '@src/object'
+import {
+  isObject
+, isntObject
+, isPlainObject
+, isntPlainObject
+, isEmptyObject
+, isntEmptyObject
+, isJson
+, isntJson
+} from '@src/object'
 import { pass } from '@blackglory/pass'
 
-describe('isObject', () => {
+describe.each([
+  ['isObject', isObject, true]
+, ['isntObject', isntObject, false]
+])('%s', (_, fn, positiveResult) => {
   test('plain object', () => {
-    const val: any = {}
+    const value = {}
 
-    const result = isObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(true)
+    expect(result).toBe(positiveResult)
   })
 
   test('array', () => {
-    const val: any = []
+    const value: unknown = []
 
-    const result = isObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(true)
+    expect(result).toBe(positiveResult)
   })
 
   test('function', () => {
-    const val = () => pass()
+    const value = () => pass()
 
-    const result = isObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 
   test('number', () => {
-    const val = 1
+    const value = 1
 
-    const result = isObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 
   test('string', () => {
-    const val = 'string'
+    const value = 'string'
 
-    const result = isObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 
   test('String', () => {
-    const val = new String('string')
+    const value = new String('string')
 
-    const result = isObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(true)
+    expect(result).toBe(positiveResult)
   })
 })
 
-describe('isPlainObject', () => {
+describe.each([
+  ['isPlainObject', isPlainObject, true]
+, ['isntPlainObject', isntPlainObject, false]
+])('%s', (_, fn, positiveResult) => {
   test('plain object', () => {
-    const val: any = {}
+    const value = {}
 
-    const result = isObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(true)
+    expect(result).toBe(positiveResult)
   })
 
   test('array', () => {
-    const val: any = []
+    const value: unknown = []
 
-    const result = isPlainObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 
   test('function', () => {
-    const val = () => pass()
+    const value = () => pass()
 
-    const result = isPlainObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 
   test('number', () => {
-    const val = 1
+    const value = 1
 
-    const result = isPlainObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 
   test('string', () => {
-    const val = 'string'
+    const value = 'string'
 
-    const result = isPlainObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 
   test('String', () => {
-    const val = new String('string')
+    const value = new String('string')
 
-    const result = isPlainObject(val)
+    const result = fn(value)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 })
 
-describe('isEmptyObject', () => {
+describe.each([
+  ['isEmptyObject', isEmptyObject, true]
+, ['isntEmptyObject', isntEmptyObject, false]
+])('%s', (_, fn, positiveResult) => {
   test('non-empty object', () => {
     const obj = { foo: 'bar' }
 
-    const result = isEmptyObject(obj)
+    const result = fn(obj)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 
   test('empty object', () => {
     const obj = {}
 
-    const result = isEmptyObject(obj)
+    const result = fn(obj)
 
-    expect(result).toBe(true)
+    expect(result).toBe(positiveResult)
   })
 })
 
-describe('isntEmptyObject', () => {
-  test('non-empty object', () => {
-    const obj = { foo: 'bar' }
-
-    const result = isntEmptyObject(obj)
-
-    expect(result).toBe(true)
-  })
-
-  test('empty object', () => {
-    const obj = {}
-
-    const result = isntEmptyObject(obj)
-
-    expect(result).toBe(false)
-  })
-})
-
-describe('isJson', () => {
-  test('undefined', () => {
-    expect(isJson(undefined)).toBe(false)
-  })
-
+describe.each([
+  ['isJson', isJson, true]
+, ['isntJson', isntJson, false]
+])('%s', (_, fn, positiveResult) => {
   test('null', () => {
-    expect(isJson(null)).toBe(true)
+    const value = null
+
+    const result = fn(value)
+
+    expect(result).toBe(positiveResult)
+  })
+
+  test('undefined', () => {
+    const value = undefined
+
+    const result = fn(value)
+
+    expect(result).toBe(!positiveResult)
   })
 
   test('Date', () => {
-    expect(isJson(new Date())).toBe(false)
+    const value = new Date()
+
+    const result = fn(value)
+
+    expect(result).toBe(!positiveResult)
   })
 
   test('RegExp', () => {
-    expect(isJson(/\w/)).toBe(false)
+    const value = /\w/
+
+    const result = fn(value)
+
+    expect(result).toBe(!positiveResult)
   })
 
   test('json array', () => {
-    expect(isJson(['foo'])).toBe(true)
+    const value = ['foo']
+
+    const result = fn(value)
+
+    expect(result).toBe(positiveResult)
   })
 
   test('non json array', () => {
-    expect(isJson([new Map()])).toBe(false)
+    const value = [new Map()]
+
+    const result = fn(value)
+
+    expect(result).toBe(!positiveResult)
   })
 
   test('plain object', () => {
-    expect(isJson({ foo: 'bar' })).toBe(true)
+    const value = { foo: 'bar' }
+
+    const result = fn(value)
+
+    expect(result).toBe(positiveResult)
   })
 
   test('non plain object', () => {
-    expect(isJson({ foo: new Map() })).toBe(false)
+    const value = { foo: new Map() }
+
+    const result = fn(value)
+
+    expect(result).toBe(!positiveResult)
   })
 })

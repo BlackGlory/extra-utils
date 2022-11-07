@@ -1,21 +1,24 @@
-import { inEnum } from '@src/enum'
+import { inEnum, notInEnum } from '@src/enum'
 
-describe('inEnum', () => {
+describe.each([
+  ['inEnum', inEnum, true]
+, ['notInEnum', notInEnum, false]
+])('%s', (_, fn, positiveResult) => {
   test('in enum', () => {
     enum Enum { Foo = 'foo' }
     const value = 'foo'
 
-    const result = inEnum(value, Enum)
+    const result = fn(value, Enum)
 
-    expect(result).toBe(true)
+    expect(result).toBe(positiveResult)
   })
 
   test('not in enum', () => {
     enum Enum { Foo = 'foo' }
     const value = 'bar'
 
-    const result = inEnum(value, Enum)
+    const result = fn(value, Enum)
 
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 })

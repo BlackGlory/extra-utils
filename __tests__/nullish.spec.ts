@@ -1,152 +1,80 @@
-import { expectType, expectNotType } from 'tsd'
-import { isNullish, isntNullish, isNull, isntNull } from '@src/nullish'
-import { Nullish } from 'justypes'
+import {
+  isNullish
+, isntNullish
+, isNull
+, isntNull
+, isUndefined
+, isntUndefined
+} from '@src/nullish'
 import 'jest-extended'
 
-describe('isNullish', () => {
-  describe('null', () => {
-    it('return true', () => {
-      const val = null
+describe.each([
+  ['isNullish', isNullish, true]
+, ['isntNullish', isntNullish, false]
+])('%s', (_, fn, positiveResult) => {
+  test('null', () => {
+    const value = null
 
-      const result = isNullish(val)
+    const result = fn(value)
 
-      expect(result).toBeTrue()
-    })
-
-    it('type guard', () => {
-      const val: unknown = null
-
-      if (isNullish(val)) {
-        expectType<Nullish>(val)
-      }
-    })
+    expect(result).toBe(positiveResult)
   })
 
-  describe('undefined', () => {
-    it('return true', () => {
-      const val = undefined
+  test('undefined', () => {
+    const value = undefined
 
-      const result = isNullish(val)
+    const result = fn(value)
 
-      expect(result).toBeTrue()
-    })
-
-    it('type guard', () => {
-      const val: unknown = undefined
-
-      if (isNullish(val)) {
-        expectType<Nullish>(val)
-      }
-    })
+    expect(result).toBe(positiveResult)
   })
 
-  describe('non-null', () => {
-    it('return false', () => {
-      const val = 'foo'
+  test('non-null', () => {
+    const value = 'foo'
 
-      const result = isNullish(val)
+    const result = fn(value)
 
-      expect(result).toBeFalse()
-    })
+    expect(result).toBe(!positiveResult)
   })
 })
 
-describe('isntNullish', () => {
-  describe('null', () => {
-    it('return false', () => {
-      const val = null
+describe.each([
+  ['isNull', isNull, true]
+, ['isntNull', isntNull, false]
+])('%s', (_, fn, positiveResult) => {
+  test('null', () => {
+    const value = null
 
-      const result = isntNullish(val)
+    const result = fn(value)
 
-      expect(result).toBeFalse()
-    })
+    expect(result).toBe(positiveResult)
   })
 
-  describe('undefined', () => {
-    it('return false', () => {
-      const val = undefined
+  test('non-null', () => {
+    const val = undefined
 
-      const result = isntNullish(val)
+    const result = fn(val)
 
-      expect(result).toBeFalse()
-    })
-  })
-
-  describe('non-null', () => {
-    it('return true', () => {
-      const val = 'foo'
-
-      const result = isntNullish(val)
-
-      expect(result).toBeTrue()
-    })
-
-    it('type guard', () => {
-      const val: unknown = 'foo'
-
-      if (isntNullish(val)) {
-        expectNotType<Nullish>(val)
-      }
-    })
+    expect(result).toBe(!positiveResult)
   })
 })
 
-describe('isNull', () => {
-  describe('null', () => {
-    it('return true', () => {
-      const val = null
+describe.each([
+  ['isUndefined', isUndefined, true]
+, ['isntUndefined', isntUndefined, false]
+])('%s', (_, fn, positiveResult) => {
+  test('is undefined', () => {
+    const value = undefined
 
-      const result = isNull(val)
+    const result = fn(value)
 
-      expect(result).toBeTrue()
-    })
-
-    it('type guard', () => {
-      const val: unknown = null
-
-      if (isNull(val)) {
-        expectType<null>(val)
-      }
-    })
+    expect(result).toBe(positiveResult)
   })
 
-  describe('non-null', () => {
-    it('return false', () => {
-      const val = undefined
+  test('isnt undefined', () => {
+    const value = null
 
-      const result = isNull(val)
+    const result = fn(value)
 
-      expect(result).toBeFalse()
-    })
-  })
-})
-
-describe('isntNull', () => {
-  describe('null', () => {
-    it('return false', () => {
-      const val = null
-
-      const result = isntNull(val)
-
-      expect(result).toBeFalse()
-    })
-  })
-
-  describe('non-null', () => {
-    it('return true', () => {
-      const val = undefined
-
-      const result = isntNull(val)
-
-      expect(result).toBeTrue()
-    })
-
-    it('type guard', () => {
-      const val: unknown = undefined
-
-      if (isntNull(val)) {
-        expectNotType<null>(val)
-      }
-    })
+    expect(result).toBe(!positiveResult)
   })
 })

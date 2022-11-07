@@ -20,6 +20,12 @@ function pipe<T, U>(
 ): U
 ```
 
+### Enum
+```ts
+function inEnum<T>(val: unknown, _enum: object): val is T
+function notInEnum<T, U>(val: T, _enum: object): val is Exclude<T, U>
+```
+
 ### Array
 ```ts
 function isArray<T>(val: unknown): val is Array<T>
@@ -61,18 +67,14 @@ function isntString<T>(val: T): val is Exclude<T, string>
 function isChar(val: unknown): val is string
 function isntChar(val: unknown): boolean
 
-function isURL(str: string): boolean
+function isURLString(text: string): boolean
+function isntURLString(text: string): boolean
 ```
 
 ### Date
 ```ts
 function isDate(val: unknown): val is Date
 function isntDate<T>(val: T): val is Exclude<T, Date>
-```
-
-### Enum
-```ts
-function inEnum<T>(val: unknown, _enum: object): val is T
 ```
 
 ### Function

@@ -3,13 +3,12 @@ import * as index from '@src/index'
 test('index', () => {
   const expected = [
     'pipe'
+  , 'inEnum', 'notInEnum'
 
   , 'isArray', 'isntArray'
   , 'isEmptyArray', 'isntEmptyArray'
 
   , 'isDate', 'isntDate'
-
-  , 'inEnum'
 
   , 'isNull', 'isntNull'
   , 'isUndefined', 'isntUndefined'
@@ -17,7 +16,7 @@ test('index', () => {
 
   , 'isChar', 'isntChar'
   , 'isString', 'isntString'
-  , 'isURL'
+  , 'isURLString', 'isntURLString'
 
   , 'isBigInt', 'isntBigInt'
   , 'isNumber', 'isntNumber'

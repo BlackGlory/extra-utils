@@ -1,37 +1,22 @@
 import { isRegExp, isntRegExp } from '@src/regexp'
 
-describe('isRegExp', () => {
-  test('non-regexp', () => {
-    const val = 'regexp'
-
-    const result = isRegExp(val)
-
-    expect(result).toBe(false)
-  })
-
+describe.each([
+  ['isRegExp', isRegExp, true]
+, ['isntRegExp', isntRegExp, false]
+])('%s', (_, fn, positiveResult) => {
   test('regexp', () => {
     const val = /^.*$/
 
-    const result = isRegExp(val)
+    const result = fn(val)
 
-    expect(result).toBe(true)
+    expect(result).toBe(positiveResult)
   })
-})
 
-describe('isntRegExp', () => {
   test('non-regexp', () => {
     const val = 'regexp'
 
-    const result = isntRegExp(val)
+    const result = fn(val)
 
-    expect(result).toBe(true)
-  })
-
-  test('regexp', () => {
-    const val = /^.*$/
-
-    const result = isntRegExp(val)
-
-    expect(result).toBe(false)
+    expect(result).toBe(!positiveResult)
   })
 })
