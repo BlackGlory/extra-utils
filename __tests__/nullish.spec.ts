@@ -1,5 +1,5 @@
 import { expectType, expectNotType } from 'tsd'
-import { isNullish, isntNullish } from '@src/nullish'
+import { isNullish, isntNullish, isNull, isntNull } from '@src/nullish'
 import { Nullish } from 'justypes'
 import 'jest-extended'
 
@@ -86,6 +86,66 @@ describe('isntNullish', () => {
 
       if (isntNullish(val)) {
         expectNotType<Nullish>(val)
+      }
+    })
+  })
+})
+
+describe('isNull', () => {
+  describe('null', () => {
+    it('return true', () => {
+      const val = null
+
+      const result = isNull(val)
+
+      expect(result).toBeTrue()
+    })
+
+    it('type guard', () => {
+      const val: unknown = null
+
+      if (isNull(val)) {
+        expectType<null>(val)
+      }
+    })
+  })
+
+  describe('non-null', () => {
+    it('return false', () => {
+      const val = undefined
+
+      const result = isNull(val)
+
+      expect(result).toBeFalse()
+    })
+  })
+})
+
+describe('isntNull', () => {
+  describe('null', () => {
+    it('return false', () => {
+      const val = null
+
+      const result = isntNull(val)
+
+      expect(result).toBeFalse()
+    })
+  })
+
+  describe('non-null', () => {
+    it('return true', () => {
+      const val = undefined
+
+      const result = isntNull(val)
+
+      expect(result).toBeTrue()
+    })
+
+    it('type guard', () => {
+      const val: unknown = undefined
+
+      if (isntNull(val)) {
+        expectNotType<null>(val)
       }
     })
   })

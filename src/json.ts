@@ -1,5 +1,5 @@
 import { Json } from 'justypes'
-import { isNull } from './null'
+import { isNull } from './nullish'
 import { isBoolean } from './boolean'
 import { isString } from './string'
 import { isNumber } from './number'

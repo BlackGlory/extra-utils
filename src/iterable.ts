@@ -1,5 +1,4 @@
-import { isntNull } from '@src/null'
-import { isntUndefined } from '@src/undefined'
+import { isntNull, isntUndefined } from '@src/nullish'
 import { isFunction } from '@src/function'
 
 export function isIterable<T>(val: unknown): val is Iterable<T> {
