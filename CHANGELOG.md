@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/BlackGlory/extra-utils/compare/v2.0.0...v3.0.0) (2022-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* - Renamed `isURL` to `isURLString`
+
+### Features
+
+* add `isntURLString`, `notInEnum` ([71e3bc5](https://github.com/BlackGlory/extra-utils/commit/71e3bc5ae672f3a01b75c0063dc33217f1a97105))
+
 ## [2.0.0](https://github.com/BlackGlory/extra-utils/compare/v1.4.0...v2.0.0) (2022-11-07)
 
 
