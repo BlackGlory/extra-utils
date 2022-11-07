@@ -22,6 +22,13 @@ function pipe<T, U, V>(
 function pipe<T, U>(
   value: T
 , ...operators: [
+    (value: T) => U
+  , ...Array<(value: U) => U>
+  ]
+): U
+function pipe<T, U>(
+  value: T
+, ...operators: [
     ...Array<(value: T) => T>
   , (value: T) => U
   ]
