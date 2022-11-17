@@ -1,25 +1,53 @@
-export function pipe<T, U, V>(
-  value: T
+export function pipe<A, B, C, D, E>(
+  value: A
 , ...operators: [
-    (value: T) => U
-  , ...Array<(value: U) => U>
-  , (value: U) => V
+    (value: A) => B
+  , (value: B) => C
+  , ...Array<(value: C) => C>
+  , (value: C) => D
+  , (value: D) => E
   ]
-): V
-export function pipe<T, U>(
-  value: T
+): E
+export function pipe<A, B, C, D>(
+  value: A
 , ...operators: [
-    (value: T) => U
-  , ...Array<(value: U) => U>
+    (value: A) => B
+  , (value: B) => C
+  , ...Array<(value: C) => C>
+  , (value: C) => D
   ]
-): U
-export function pipe<T, U>(
-  value: T
+): D
+export function pipe<A, B, C, D>(
+  value: A
 , ...operators: [
-    ...Array<(value: T) => T>
-  , (value: T) => U
+    (value: A) => B
+  , ...Array<(value: B) => B>
+  , (value: B) => C
+  , (value: C) => D
   ]
-): U
+): D
+export function pipe<A, B, C>(
+  value: A
+, ...operators: [
+    (value: A) => B
+  , ...Array<(value: B) => B>
+  , (value: B) => C
+  ]
+): C
+export function pipe<A, B>(
+  value: A
+, ...operators: [
+    (value: A) => B
+  , ...Array<(value: B) => B>
+  ]
+): B
+export function pipe<A, B>(
+  value: A
+, ...operators: [
+    ...Array<(value: A) => A>
+  , (value: A) => B
+  ]
+): B
 export function pipe<T>(
   value: T
 , ...operators: Array<(value: T) => T>
