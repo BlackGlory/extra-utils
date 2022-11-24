@@ -1,3 +1,37 @@
+export function pipe<A, B, C, D, E, F, G>(
+  value: A
+, ...operators: [
+    (value: A) => B
+  , (value: B) => C
+  , (value: C) => D
+  , ...Array<(value: D) => D>
+  , (value: D) => E
+  , (value: E) => F
+  , (value: F) => G
+  ]
+): G
+export function pipe<A, B, C, D, E, F>(
+  value: A
+, ...operators: [
+    (value: A) => B
+  , (value: B) => C
+  , ...Array<(value: C) => C>
+  , (value: C) => D
+  , (value: D) => E
+  , (value: E) => F
+  ]
+): F
+export function pipe<A, B, C, D, E, F>(
+  value: A
+, ...operators: [
+    (value: A) => B
+  , (value: B) => C
+  , (value: C) => D
+  , ...Array<(value: D) => D>
+  , (value: D) => E
+  , (value: E) => F
+  ]
+): F
 export function pipe<A, B, C, D, E>(
   value: A
 , ...operators: [
