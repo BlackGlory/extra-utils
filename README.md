@@ -162,9 +162,15 @@ function isntPlainObject<T>(
 
 function isEmptyObject(val: object): boolean
 function isntEmptyObject(val: object): boolean
+```
 
+### JSON
+```ts
 function isJson(val: unknown): Json
 function isntJson<T>(val: T): val is Exclude<T, Json>
+
+function isJsonable<T extends Json>(val: unknown): val is Jsonable<T>
+function isntJsonable<T>(val: T): val is Exclude<T, Jsonable<Json>>
 ```
 
 ### RegExp
