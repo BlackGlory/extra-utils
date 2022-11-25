@@ -11,13 +11,24 @@ yarn add extra-utils
 ## API
 ### pipe
 ```ts
+function pipe<A, B, C, D, E, F, G, H>(
+  value: A
+, ...operators: [
+    (value: A) => B
+  , (value: B) => C
+  , (value: C) => D
+  , (value: D) => E
+  , (value: E) => F
+  , (value: F) => G
+  , (value: G) => H
+  ]
+): H
 function pipe<A, B, C, D, E, F, G>(
   value: A
 , ...operators: [
     (value: A) => B
   , (value: B) => C
   , (value: C) => D
-  , ...Array<(value: D) => D>
   , (value: D) => E
   , (value: E) => F
   , (value: F) => G
@@ -28,19 +39,7 @@ function pipe<A, B, C, D, E, F>(
 , ...operators: [
     (value: A) => B
   , (value: B) => C
-  , ...Array<(value: C) => C>
   , (value: C) => D
-  , (value: D) => E
-  , (value: E) => F
-  ]
-): F
-function pipe<A, B, C, D, E, F>(
-  value: A
-, ...operators: [
-    (value: A) => B
-  , (value: B) => C
-  , (value: C) => D
-  , ...Array<(value: D) => D>
   , (value: D) => E
   , (value: E) => F
   ]
@@ -50,7 +49,6 @@ function pipe<A, B, C, D, E>(
 , ...operators: [
     (value: A) => B
   , (value: B) => C
-  , ...Array<(value: C) => C>
   , (value: C) => D
   , (value: D) => E
   ]
@@ -60,16 +58,6 @@ function pipe<A, B, C, D>(
 , ...operators: [
     (value: A) => B
   , (value: B) => C
-  , ...Array<(value: C) => C>
-  , (value: C) => D
-  ]
-): D
-function pipe<A, B, C, D>(
-  value: A
-, ...operators: [
-    (value: A) => B
-  , ...Array<(value: B) => B>
-  , (value: B) => C
   , (value: C) => D
   ]
 ): D
@@ -77,7 +65,6 @@ function pipe<A, B, C>(
   value: A
 , ...operators: [
     (value: A) => B
-  , ...Array<(value: B) => B>
   , (value: B) => C
   ]
 ): C
@@ -85,20 +72,12 @@ function pipe<A, B>(
   value: A
 , ...operators: [
     (value: A) => B
-  , ...Array<(value: B) => B>
   ]
 ): B
-function pipe<A, B>(
-  value: A
-, ...operators: [
-    ...Array<(value: A) => A>
-  , (value: A) => B
-  ]
-): B
-function pipe<T>(
+function pipe<T, U>(
   value: T
-, ...operators: Array<(value: T) => T>
-): T
+, ...operators: Array<(value: unknown) => unknown>
+): U
 ```
 
 ### Enum
