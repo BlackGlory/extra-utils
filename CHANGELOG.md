@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.1](https://github.com/BlackGlory/extra-utils/compare/v3.5.0...v3.5.1) (2022-11-25)
+
+
+### Bug Fixes
+
+* signature overloads ([f08e450](https://github.com/BlackGlory/extra-utils/commit/f08e450542b0f724706f78aa13202cd54147259d))
+
 ## [3.5.0](https://github.com/BlackGlory/extra-utils/compare/v3.4.0...v3.5.0) (2022-11-24)
 
 
