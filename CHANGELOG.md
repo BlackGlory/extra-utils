@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/BlackGlory/extra-utils/compare/v3.5.1...v3.6.0) (2022-12-14)
+
+
+### Features
+
+* add removeExtraIndents, removeBlankLines, removeLeadingBlankLines, removeTrailingBlankLines ([6ab15c7](https://github.com/BlackGlory/extra-utils/commit/6ab15c79d9a5e2002a87f06a550ea1dfa9416ee5))
+
 ### [3.5.1](https://github.com/BlackGlory/extra-utils/compare/v3.5.0...v3.5.1) (2022-11-25)
 
 
