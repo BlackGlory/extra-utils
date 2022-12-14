@@ -2,31 +2,65 @@ import { removeTrailingBlankLines } from '@src/string/remove-trailing-blank-line
 
 describe('removeTrailingBlankLines', () => {
   describe('trailing blank lines exist', () => {
-    test('\\n\\s+', () => {
-      const result = removeTrailingBlankLines(
-        '  ' + '\n'
-      + 'a' + '\n'
-      + '  ' + '\n'
-      + '  '
-      )
+    describe('maxRemovals = Infinity', () => {
+      test('\\n\\s+', () => {
+        const result = removeTrailingBlankLines(
+          '  ' + '\n'
+        + 'a' + '\n'
+        + '  ' + '\n'
+        + '  '
+        )
 
-      expect(result).toBe(
-        '  ' + '\n'
-      + 'a'
-      )
+        expect(result).toBe(
+          '  ' + '\n'
+        + 'a'
+        )
+      })
+
+      test('\\n', () => {
+        const result = removeTrailingBlankLines(
+          '  ' + '\n'
+        + 'a' + '\n'
+        + '\n'
+        )
+
+        expect(result).toBe(
+          '  ' + '\n'
+        + 'a'
+        )
+      })
     })
 
-    test('\\n', () => {
-      const result = removeTrailingBlankLines(
-        '  ' + '\n'
-      + 'a' + '\n'
-      + '\n'
-      )
+    describe('maxRemovals = 1', () => {
+      test('\\n\\s+', () => {
+        const result = removeTrailingBlankLines(
+          '  ' + '\n'
+        + 'a' + '\n'
+        + '  ' + '\n'
+        + '  '
+        , 1
+        )
 
-      expect(result).toBe(
-        '  ' + '\n'
-      + 'a'
-      )
+        expect(result).toBe(
+          '  ' + '\n'
+        + 'a' + '\n'
+        + '  '
+        )
+      })
+
+      test('\\n', () => {
+        const result = removeTrailingBlankLines(
+          '  ' + '\n'
+        + 'a' + '\n'
+        + '\n'
+        , 1
+        )
+
+        expect(result).toBe(
+          '  ' + '\n'
+        + 'a' + '\n'
+        )
+      })
     })
   })
 

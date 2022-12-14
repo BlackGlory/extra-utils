@@ -1,10 +1,19 @@
 import { isBlankLine } from './utils'
 
-export function removeLeadingBlankLines(text: string): string {
+export function removeLeadingBlankLines(
+  text: string
+, maxRemovals: number = Infinity
+): string {
   const lines = text.split('\n')
 
-  while (lines.length > 0 && isBlankLine(lines[0])) {
+  let removals = 0
+  while (
+    removals < maxRemovals &&
+    lines.length > 0 &&
+    isBlankLine(lines[0])
+  ) {
     lines.shift()
+    removals++
   }
 
   return lines.join('\n')

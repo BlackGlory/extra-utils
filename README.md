@@ -137,7 +137,10 @@ removeBlankLines(
 
 #### removeLeadingBlankLines
 ```ts
-function removeLeadingBlankLines(text: string): string
+function removeLeadingBlankLines(
+  text: string
+, maxRemovals: number = Infinity
+): string
 ```
 
 Example:
@@ -153,7 +156,10 @@ removeLeadingBlankLines(
 
 #### removeTrailingBlankLines
 ```ts
-function removeTrailingBlankLines(text: string): string
+function removeTrailingBlankLines(
+  text: string
+, maxRemovals: number = Infinity
+): string
 ```
 
 Example:
