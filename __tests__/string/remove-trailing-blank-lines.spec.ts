@@ -6,6 +6,7 @@ describe('removeTrailingBlankLines', () => {
       const result = removeTrailingBlankLines(
         '  ' + '\n'
       + 'a' + '\n'
+      + '  ' + '\n'
       + '  '
       )
 
@@ -19,6 +20,7 @@ describe('removeTrailingBlankLines', () => {
       const result = removeTrailingBlankLines(
         '  ' + '\n'
       + 'a' + '\n'
+      + '\n'
       )
 
       expect(result).toBe(

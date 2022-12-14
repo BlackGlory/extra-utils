@@ -5,6 +5,7 @@ describe('removeLeadingBlankLines', () => {
     test('\\s+\\n', () => {
       const result = removeLeadingBlankLines(
         '  ' + '\n'
+      + '  ' + '\n'
       + 'a' + '\n'
       + '  '
       )
@@ -18,6 +19,7 @@ describe('removeLeadingBlankLines', () => {
     test('\\n', () => {
       const result = removeLeadingBlankLines(
         '\n'
+      + '\n'
       + 'a' + '\n'
       + '  '
       )
