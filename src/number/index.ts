@@ -1,0 +1,5 @@
+export * from './is-bigint'
+export * from './is-finite'
+export * from './is-infinity'
+export * from './is-nan'
+export * from './is-number'

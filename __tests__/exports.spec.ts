@@ -17,6 +17,10 @@ test('index', () => {
   , 'isChar', 'isntChar'
   , 'isString', 'isntString'
   , 'isURLString', 'isntURLString'
+  , 'removeExtraIndents'
+  , 'removeBlankLines'
+  , 'removeLeadingBlankLines'
+  , 'removeTrailingBlankLines'
 
   , 'isBigInt', 'isntBigInt'
   , 'isNumber', 'isntNumber'
