@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/BlackGlory/extra-utils/compare/v3.6.0...v3.7.0) (2022-12-14)
+
+
+### Features
+
+* add `maxRemovals` parameters ([9f7b5a4](https://github.com/BlackGlory/extra-utils/commit/9f7b5a48363691849ebc8b4eb62f7ba79dfd4909))
+
 ## [3.6.0](https://github.com/BlackGlory/extra-utils/compare/v3.5.1...v3.6.0) (2022-12-14)
 
 
