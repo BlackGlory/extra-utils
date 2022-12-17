@@ -1,5 +1,4 @@
 import { isBigInt, isntBigInt } from '@src/number/is-bigint'
-import 'jest-extended'
 
 describe.each([
   ['isBigInt', isBigInt, true]

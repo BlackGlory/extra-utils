@@ -1,5 +1,4 @@
 import { isFinite } from '@src/number/is-finite'
-import 'jest-extended'
 
 describe('isFinite', () => {
   describe('finite', () => {

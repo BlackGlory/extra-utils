@@ -1,5 +1,4 @@
 import { isNegativeInfinity, isPositiveInfinity } from '@src/number/is-infinity'
-import 'jest-extended'
 
 describe.each([
   ['isPositiveInfinity', isPositiveInfinity, true]

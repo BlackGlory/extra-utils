@@ -1,5 +1,4 @@
 import { isNull, isntNull } from '@src/nullish/is-null'
-import 'jest-extended'
 
 describe.each([
   ['isNull', isNull, true]
