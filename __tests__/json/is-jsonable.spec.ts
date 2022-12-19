@@ -1,8 +1,8 @@
-import { isJsonable, isntJsonable } from '@src/json/is-jsonable'
+import { isJSONSerializable, isntJSONSerializable } from '@src/json/is-json-serializable'
 
 describe.each([
-  ['isJsonable', isJsonable, true]
-, ['isntJsonable', isntJsonable, false]
+  ['isJSONSerializable', isJSONSerializable, true]
+, ['isntJSONSerializable', isntJSONSerializable, false]
 ])('%s', (_, fn, positiveResult) => {
   test('object with toJSON method', () => {
     const obj = {

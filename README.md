@@ -29,11 +29,15 @@ function isntFalsy<T>(val: T): val is Exclude<T, Falsy>
 
 ### JSON
 ```ts
-function isJson(val: unknown): Json
-function isntJson<T>(val: T): val is Exclude<T, Json>
+function isJSONValue(val: unknown): val is JSONValue
+function isntJSONValue<T>(val: T): val is Exclude<T, JSONValue>
 
-function isJsonable<T extends Json>(val: unknown): val is Jsonable<T>
-function isntJsonable<T>(val: T): val is Exclude<T, Jsonable<Json>>
+function isJSONSerializable<T extends
+| JSONValue
+| Record<string, JSONValue | JSONSerializable<any>>
+| Array<JSONValue | JSONSerializable<any>>
+>(val: unknown): val is JSONSerializable<T>
+function isntJSONSerializable<T>(val: T): val is Exclude<T, JSONSerializable<any>>
 ```
 
 ### Nullish

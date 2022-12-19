@@ -1,8 +1,8 @@
-import { isJson, isntJson } from '@src/json/is-json'
+import { isJSONValue, isntJSONValue } from '@src/json/is-json-value'
 
 describe.each([
-  ['isJson', isJson, true]
-, ['isntJson', isntJson, false]
+  ['isJSONValue', isJSONValue, true]
+, ['isntJSONValue', isntJSONValue, false]
 ])('%s', (_, fn, positiveResult) => {
   test('null', () => {
     const value = null
