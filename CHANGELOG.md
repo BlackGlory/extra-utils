@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/BlackGlory/extra-utils/compare/v3.7.0...v4.0.0) (2022-12-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* - Renamed `isJson` to `isJSONValue`
+- Renamed `isntJson` to `isntJSONValue`
+- Renamed `isJsonable` to `isJSONSerializable`
+- Renamed `isntJsonable` to `isntJSONSerializable`
+
+* upgrade dependencies ([3cd7ea5](https://github.com/BlackGlory/extra-utils/commit/3cd7ea530b8fcc3830c52b824e8a8eebcd0df713))
+
 ## [3.7.0](https://github.com/BlackGlory/extra-utils/compare/v3.6.0...v3.7.0) (2022-12-14)
 
 
