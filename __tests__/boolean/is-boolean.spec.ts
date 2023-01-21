@@ -1,4 +1,4 @@
-import { isBoolean, isntBoolean } from '@src/boolean/is-boolean'
+import { isBoolean, isntBoolean } from '@src/boolean/is-boolean.js'
 
 describe.each([
   ['isBoolean', isBoolean, true]

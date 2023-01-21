@@ -1,4 +1,4 @@
-import { isBlankLine } from './utils'
+import { isBlankLine } from './utils.js'
 
 export function removeLeadingBlankLines(
   text: string

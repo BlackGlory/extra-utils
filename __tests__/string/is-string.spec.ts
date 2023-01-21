@@ -1,4 +1,4 @@
-import { isString, isntString } from '@src/string/is-string'
+import { isString, isntString } from '@src/string/is-string.js'
 
 describe.each([
   ['isString', isString, true]

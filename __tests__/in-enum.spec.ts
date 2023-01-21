@@ -1,4 +1,4 @@
-import { inEnum, notInEnum } from '@src/in-enum'
+import { inEnum, notInEnum } from '@src/in-enum.js'
 
 describe.each([
   ['inEnum', inEnum, true]

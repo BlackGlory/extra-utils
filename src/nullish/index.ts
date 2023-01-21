@@ -1,3 +1,3 @@
-export * from './is-null'
-export * from './is-undefined'
-export * from './is-nullish'
+export * from './is-null.js'
+export * from './is-undefined.js'
+export * from './is-nullish.js'

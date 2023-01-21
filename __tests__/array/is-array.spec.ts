@@ -1,4 +1,4 @@
-import { isArray, isntArray } from '@src/array/is-array'
+import { isArray, isntArray } from '@src/array/is-array.js'
 
 describe.each([
   ['isArray', isArray, true]

@@ -1,4 +1,4 @@
-import { isJSONSerializable, isntJSONSerializable } from '@src/json/is-json-serializable'
+import { isJSONSerializable, isntJSONSerializable } from '@src/json/is-json-serializable.js'
 
 describe.each([
   ['isJSONSerializable', isJSONSerializable, true]

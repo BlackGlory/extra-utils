@@ -1,4 +1,4 @@
-import isPlainObjectByLodash from 'lodash/isPlainObject'
+import isPlainObjectByLodash from 'lodash/isPlainObject.js'
 
 export function isPlainObject(
   val: unknown

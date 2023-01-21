@@ -1,4 +1,4 @@
-import { isNullish, isntNullish } from '@src/nullish/is-nullish'
+import { isNullish, isntNullish } from '@src/nullish/is-nullish.js'
 
 describe.each([
   ['isNullish', isNullish, true]

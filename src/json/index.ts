@@ -1,2 +1,2 @@
-export * from './is-json-value'
-export * from './is-json-serializable'
+export * from './is-json-value.js'
+export * from './is-json-serializable.js'

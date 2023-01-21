@@ -1,4 +1,4 @@
-import { isRegExp, isntRegExp } from '@src/is-regexp'
+import { isRegExp, isntRegExp } from '@src/is-regexp.js'
 
 describe.each([
   ['isRegExp', isRegExp, true]

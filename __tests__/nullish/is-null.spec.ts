@@ -1,4 +1,4 @@
-import { isNull, isntNull } from '@src/nullish/is-null'
+import { isNull, isntNull } from '@src/nullish/is-null.js'
 
 describe.each([
   ['isNull', isNull, true]

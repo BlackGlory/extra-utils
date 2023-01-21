@@ -1,4 +1,4 @@
-import { removeBlankLines } from '@src/string/remove-blank-lines'
+import { removeBlankLines } from '@src/string/remove-blank-lines.js'
 
 test('removeBlankLines', () => {
   const result = removeBlankLines(

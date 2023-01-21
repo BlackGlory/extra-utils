@@ -1,4 +1,4 @@
-import { isBigInt, isntBigInt } from '@src/number/is-bigint'
+import { isBigInt, isntBigInt } from '@src/number/is-bigint.js'
 
 describe.each([
   ['isBigInt', isBigInt, true]

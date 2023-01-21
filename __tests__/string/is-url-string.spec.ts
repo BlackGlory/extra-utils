@@ -1,4 +1,4 @@
-import { isURLString, isntURLString } from '@src/string/is-url-string'
+import { isURLString, isntURLString } from '@src/string/is-url-string.js'
 
 describe.each([
   ['isURLString', isURLString, true]

@@ -1,6 +1,6 @@
 import { Nullish } from 'justypes'
-import { isNull } from './is-null'
-import { isUndefined } from './is-undefined'
+import { isNull } from './is-null.js'
+import { isUndefined } from './is-undefined.js'
 
 export function isNullish(val: unknown): val is Nullish {
   return isNull(val)

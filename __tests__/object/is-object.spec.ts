@@ -1,4 +1,4 @@
-import { isObject, isntObject } from '@src/object/is-object'
+import { isObject, isntObject } from '@src/object/is-object.js'
 import { pass } from '@blackglory/pass'
 
 describe.each([

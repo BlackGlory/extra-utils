@@ -1,4 +1,4 @@
-import { isSymbol, isntSymbol } from '@src/is-symbol'
+import { isSymbol, isntSymbol } from '@src/is-symbol.js'
 
 describe.each([
   ['isSymbol', isSymbol, true]

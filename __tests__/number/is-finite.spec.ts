@@ -1,4 +1,4 @@
-import { isFinite } from '@src/number/is-finite'
+import { isFinite } from '@src/number/is-finite.js'
 
 describe('isFinite', () => {
   describe('finite', () => {

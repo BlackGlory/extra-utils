@@ -1,10 +1,10 @@
 import { JSONValue } from 'justypes'
-import { isNull } from '@src/nullish'
-import { isBoolean } from '@src/boolean'
-import { isString } from '@src/string'
-import { isNumber } from '@src/number'
-import { isArray } from '@src/array'
-import { isPlainObject } from '@src/object'
+import { isNull } from '@src/nullish/index.js'
+import { isBoolean } from '@src/boolean/index.js'
+import { isString } from '@src/string/index.js'
+import { isNumber } from '@src/number/index.js'
+import { isArray } from '@src/array/index.js'
+import { isPlainObject } from '@src/object/index.js'
 
 export function isJSONValue(val: unknown): val is JSONValue {
   return isNull(val)

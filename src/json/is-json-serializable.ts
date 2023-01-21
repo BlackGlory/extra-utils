@@ -1,6 +1,6 @@
 import { JSONValue, JSONSerializable } from 'justypes'
-import { isObject } from '@src/object'
-import { isFunction } from '@src/is-function'
+import { isObject } from '@src/object/index.js'
+import { isFunction } from '@src/is-function.js'
 
 export function isJSONSerializable<T extends
 | JSONValue

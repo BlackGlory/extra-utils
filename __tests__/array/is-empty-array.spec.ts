@@ -1,4 +1,4 @@
-import { isEmptyArray, isntEmptyArray } from '@src/array/is-empty-array'
+import { isEmptyArray, isntEmptyArray } from '@src/array/is-empty-array.js'
 
 describe.each([
   ['isEmptyArray', isEmptyArray, true]

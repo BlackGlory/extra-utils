@@ -1,4 +1,4 @@
-import { isJSONValue, isntJSONValue } from '@src/json/is-json-value'
+import { isJSONValue, isntJSONValue } from '@src/json/is-json-value.js'
 
 describe.each([
   ['isJSONValue', isJSONValue, true]

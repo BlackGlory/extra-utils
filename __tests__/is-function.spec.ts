@@ -1,4 +1,4 @@
-import { isFunction, isntFunction } from '@src/is-function'
+import { isFunction, isntFunction } from '@src/is-function.js'
 import { pass } from '@blackglory/pass'
 
 describe.each([

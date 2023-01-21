@@ -1,2 +1,2 @@
-export * from './is-array'
-export * from './is-empty-array'
+export * from './is-array.js'
+export * from './is-empty-array.js'

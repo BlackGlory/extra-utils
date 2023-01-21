@@ -1,4 +1,4 @@
-import { isNegativeInfinity, isPositiveInfinity } from '@src/number/is-infinity'
+import { isNegativeInfinity, isPositiveInfinity } from '@src/number/is-infinity.js'
 
 describe.each([
   ['isPositiveInfinity', isPositiveInfinity, true]

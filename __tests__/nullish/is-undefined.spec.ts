@@ -1,4 +1,4 @@
-import { isUndefined, isntUndefined } from '@src/nullish/is-undefined'
+import { isUndefined, isntUndefined } from '@src/nullish/is-undefined.js'
 
 describe.each([
   ['isUndefined', isUndefined, true]

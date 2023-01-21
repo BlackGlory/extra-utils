@@ -1,4 +1,4 @@
-import { isNumber, isntNumber } from '@src/number/is-number'
+import { isNumber, isntNumber } from '@src/number/is-number.js'
 
 describe.each([
   ['isNumber', isNumber, true]

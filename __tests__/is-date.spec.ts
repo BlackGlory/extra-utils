@@ -1,4 +1,4 @@
-import { isDate, isntDate } from '@src/is-date'
+import { isDate, isntDate } from '@src/is-date.js'
 
 describe.each([
   ['isDate', isDate, true]

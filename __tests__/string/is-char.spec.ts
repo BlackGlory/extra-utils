@@ -1,4 +1,4 @@
-import { isChar, isntChar } from '@src/string/is-char'
+import { isChar, isntChar } from '@src/string/is-char.js'
 
 describe.each([
   ['isChar', isChar, true]

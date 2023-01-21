@@ -1,2 +1,2 @@
-export * from './is-boolean'
-export * from './is-falsy'
+export * from './is-boolean.js'
+export * from './is-falsy.js'

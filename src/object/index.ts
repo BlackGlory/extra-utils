@@ -1,3 +1,3 @@
-export * from './is-empty-object'
-export * from './is-object'
-export * from './is-plain-object'
+export * from './is-empty-object.js'
+export * from './is-object.js'
+export * from './is-plain-object.js'

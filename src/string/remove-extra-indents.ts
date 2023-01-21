@@ -1,4 +1,4 @@
-import { isntBlankLine } from './utils'
+import { isntBlankLine } from './utils.js'
 
 export function removeExtraIndents(
   text: string

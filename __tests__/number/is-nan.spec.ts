@@ -1,4 +1,4 @@
-import { isNaN, isntNaN } from '@src/number/is-nan'
+import { isNaN, isntNaN } from '@src/number/is-nan.js'
 
 describe.each([
   ['isNaN', isNaN, true]

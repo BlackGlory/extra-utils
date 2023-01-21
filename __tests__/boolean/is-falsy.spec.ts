@@ -1,4 +1,4 @@
-import { isFalsy, isntFalsy } from '@src/boolean/is-falsy'
+import { isFalsy, isntFalsy } from '@src/boolean/is-falsy.js'
 
 describe.each([
   ['isFalsy', isFalsy, true]

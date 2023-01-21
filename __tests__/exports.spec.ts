@@ -1,4 +1,4 @@
-import * as index from '@src/index'
+import * as index from '@src/index.js'
 
 test('index', () => {
   const expected = [

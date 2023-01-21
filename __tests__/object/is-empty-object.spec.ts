@@ -1,4 +1,4 @@
-import { isEmptyObject, isntEmptyObject } from '@src/object/is-empty-object'
+import { isEmptyObject, isntEmptyObject } from '@src/object/is-empty-object.js'
 
 describe.each([
   ['isEmptyObject', isEmptyObject, true]

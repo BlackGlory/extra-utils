@@ -1,4 +1,4 @@
-import { removeLeadingBlankLines } from '@src/string/remove-leading-blank-lines'
+import { removeLeadingBlankLines } from '@src/string/remove-leading-blank-lines.js'
 
 describe('removeLeadingBlankLines', () => {
   describe('leading blank lines exist', () => {

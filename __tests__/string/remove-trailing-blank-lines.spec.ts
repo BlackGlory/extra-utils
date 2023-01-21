@@ -1,4 +1,4 @@
-import { removeTrailingBlankLines } from '@src/string/remove-trailing-blank-lines'
+import { removeTrailingBlankLines } from '@src/string/remove-trailing-blank-lines.js'
 
 describe('removeTrailingBlankLines', () => {
   describe('trailing blank lines exist', () => {

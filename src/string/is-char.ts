@@ -1,4 +1,4 @@
-import { isString } from './is-string'
+import { isString } from './is-string.js'
 
 export function isChar(val: unknown): val is string {
   return isString(val)
