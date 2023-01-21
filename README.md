@@ -276,6 +276,6 @@ function pipe<A, B>(
 ): B
 function pipe<T, U>(
   value: T
-, ...operators: Array<(value: unknown) => unknown>
+, ...operators: Array<(value: any) => unknown>
 ): U
 ```
