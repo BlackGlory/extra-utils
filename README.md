@@ -279,3 +279,74 @@ function pipe<T, U>(
 , ...operators: Array<(value: any) => unknown>
 ): U
 ```
+
+### pipeAsync
+```ts
+function pipeAsync<A, B, C, D, E, F, G, H>(
+  value: Awaitable<A>
+, ...operators: [
+    (value: A) => Awaitable<B>
+  , (value: B) => Awaitable<C>
+  , (value: C) => Awaitable<D>
+  , (value: D) => Awaitable<E>
+  , (value: E) => Awaitable<F>
+  , (value: F) => Awaitable<G>
+  , (value: G) => Awaitable<H>
+  ]
+): Promise<H>
+function pipeAsync<A, B, C, D, E, F, G>(
+  value: Awaitable<A>
+, ...operators: [
+    (value: A) => Awaitable<B>
+  , (value: B) => Awaitable<C>
+  , (value: C) => Awaitable<D>
+  , (value: D) => Awaitable<E>
+  , (value: E) => Awaitable<F>
+  , (value: F) => Awaitable<G>
+  ]
+): Promise<G>
+function pipeAsync<A, B, C, D, E, F>(
+  value: Awaitable<A>
+, ...operators: [
+    (value: A) => Awaitable<B>
+  , (value: B) => Awaitable<C>
+  , (value: C) => Awaitable<D>
+  , (value: D) => Awaitable<E>
+  , (value: E) => Awaitable<F>
+  ]
+): Promise<F>
+function pipeAsync<A, B, C, D, E>(
+  value: Awaitable<A>
+, ...operators: [
+    (value: A) => Awaitable<B>
+  , (value: B) => Awaitable<C>
+  , (value: C) => Awaitable<D>
+  , (value: D) => Awaitable<E>
+  ]
+): Promise<E>
+function pipeAsync<A, B, C, D>(
+  value: Awaitable<A>
+, ...operators: [
+    (value: A) => Awaitable<B>
+  , (value: B) => Awaitable<C>
+  , (value: C) => Awaitable<D>
+  ]
+): Promise<D>
+function pipeAsync<A, B, C>(
+  value: Awaitable<A>
+, ...operators: [
+    (value: A) => Awaitable<B>
+  , (value: B) => Awaitable<C>
+  ]
+): Promise<C>
+function pipeAsync<A, B>(
+  value: Awaitable<A>
+, ...operators: [
+    (value: A) => Awaitable<B>
+  ]
+): Promise<B>
+function pipeAsync<T, U>(
+  value: Awaitable<T>
+, ...operators: Array<(value: any) => Awaitable<unknown>>
+): Promise<U>
+```
