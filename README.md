@@ -98,6 +98,8 @@ function isntChar(val: unknown): boolean
 
 function isURLString(text: string): boolean
 function isntURLString(text: string): boolean
+
+function toString(val: unknown): string
 ```
 
 #### removeExtraIndents

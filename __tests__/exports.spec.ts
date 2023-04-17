@@ -21,6 +21,7 @@ test('index', () => {
   , 'removeBlankLines'
   , 'removeLeadingBlankLines'
   , 'removeTrailingBlankLines'
+  , 'toString'
 
   , 'isBigInt', 'isntBigInt'
   , 'isNumber', 'isntNumber'
