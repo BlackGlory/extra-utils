@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.2.0](https://github.com/BlackGlory/extra-utils/compare/v5.1.1...v5.2.0) (2023-04-17)
+
+
+### Features
+
+* add `toString` ([8bb6a6e](https://github.com/BlackGlory/extra-utils/commit/8bb6a6e1a14b9b1b6a0c90d42455497a1c60e56a))
+
 ### [5.1.1](https://github.com/BlackGlory/extra-utils/compare/v5.1.0...v5.1.1) (2023-03-25)
 
 ## [5.1.0](https://github.com/BlackGlory/extra-utils/compare/v5.0.1...v5.1.0) (2023-02-18)
