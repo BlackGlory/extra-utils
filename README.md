@@ -9,6 +9,12 @@ yarn add extra-utils
 ```
 
 ## API
+### ArrayLike
+```ts
+function first<T>(arr: ArrayLike<T>): T | undefined
+function last<T>(arr: ArrayLike<T>): T | undefined
+```
+
 ### Array
 ```ts
 function isArray<T>(val: unknown): val is Array<T>

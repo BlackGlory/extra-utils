@@ -1,3 +1,4 @@
+export * from './array-like/index.js'
 export * from './array/index.js'
 export * from './boolean/index.js'
 export * from './number/index.js'

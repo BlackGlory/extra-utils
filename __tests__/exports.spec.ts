@@ -5,6 +5,9 @@ test('index', () => {
     'pipe', 'pipeAsync'
   , 'inEnum', 'notInEnum'
 
+  , 'first'
+  , 'last'
+
   , 'isArray', 'isntArray'
   , 'isEmptyArray', 'isntEmptyArray'
 
