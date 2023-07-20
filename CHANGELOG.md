@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.4.0](https://github.com/BlackGlory/extra-utils/compare/v5.3.0...v5.4.0) (2023-07-20)
+
+
+### Features
+
+* add `isReferenceEqual`, `isShallowEqual`, `isDeepEqual` ([0fc8a5f](https://github.com/BlackGlory/extra-utils/commit/0fc8a5f77268b75dc0ba0ff20be90053f3579bc9))
+
 ## [5.3.0](https://github.com/BlackGlory/extra-utils/compare/v5.2.0...v5.3.0) (2023-06-14)
 
 
