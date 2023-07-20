@@ -37,6 +37,7 @@ test('index', () => {
   , 'isObject', 'isntObject'
   , 'isPlainObject', 'isntPlainObject'
   , 'isEmptyObject', 'isntEmptyObject'
+  , 'isReferenceEqual', 'isShallowEqual', 'isDeepEqual'
 
   , 'isJSONValue', 'isntJSONValue'
   , 'isJSONSerializable', 'isntJSONSerializable'

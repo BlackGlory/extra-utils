@@ -92,6 +92,10 @@ function isntPlainObject<T>(
 
 function isEmptyObject(val: object): boolean
 function isntEmptyObject(val: object): boolean
+
+function isReferenceEqual(a: unknown, b: unknown): boolean
+function isShallowEqual(a: unknown, b: unknown): boolean
+function isDeepEqual(a: unknown, b: unknown): boolean
 ```
 
 ### String

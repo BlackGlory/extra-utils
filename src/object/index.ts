@@ -1,3 +1,6 @@
 export * from './is-empty-object.js'
 export * from './is-object.js'
 export * from './is-plain-object.js'
+export * from './is-reference-equal.js'
+export * from './is-shallow-equal.js'
+export * from './is-deep-equal.js'
