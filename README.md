@@ -191,8 +191,14 @@ removeTrailingBlankLines(
 
 ### Enum
 ```ts
-function inEnum<T>(val: unknown, _enum: object): val is T
-function notInEnum<T, U>(val: T, _enum: object): val is Exclude<T, U>
+function inEnum<T extends string | number>(
+  val: string | number
+, _enum: Record<string | number, string | number>
+): val is T
+function notInEnum(
+  val: string | number
+, _enum: Record<string | number, string | number>
+): boolean
 ```
 
 ### Date

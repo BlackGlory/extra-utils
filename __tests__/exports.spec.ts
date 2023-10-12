@@ -3,7 +3,11 @@ import * as index from '@src/index.js'
 test('index', () => {
   const expected = [
     'pipe', 'pipeAsync'
+
   , 'inEnum', 'notInEnum'
+  , 'enumKeys'
+  , 'enumValues'
+  , 'enumEntries'
 
   , 'first'
   , 'last'
