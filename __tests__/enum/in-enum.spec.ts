@@ -8,7 +8,7 @@ describe('inEnum', () => {
       }
       const value = 0
 
-      const result = inEnum<Enum>(value, Enum)
+      const result = inEnum(value, Enum)
 
       expect(result).toBe(true)
     })
@@ -19,7 +19,7 @@ describe('inEnum', () => {
       }
       const value = 1
 
-      const result = inEnum<Enum>(value, Enum)
+      const result = inEnum(value, Enum)
 
       expect(result).toBe(false)
     })
@@ -31,7 +31,7 @@ describe('inEnum', () => {
         }
         const value = 'Foo'
 
-        const result = inEnum<Enum>(value, Enum)
+        const result = inEnum(value, Enum)
 
         expect(result).toBe(false)
       })
@@ -42,7 +42,7 @@ describe('inEnum', () => {
         }
         const value = 'Foo'
 
-        const result = inEnum<Enum>(value, Enum)
+        const result = inEnum(value, Enum)
 
         expect(result).toBe(false)
       })
@@ -56,7 +56,7 @@ describe('inEnum', () => {
       }
       const value = 'foo'
 
-      const result = inEnum<Enum>(value, Enum)
+      const result = inEnum(value, Enum)
 
       expect(result).toBe(true)
     })
@@ -67,7 +67,7 @@ describe('inEnum', () => {
       }
       const value = 'bar'
 
-      const result = inEnum<Enum>(value, Enum)
+      const result = inEnum(value, Enum)
 
       expect(result).toBe(false)
     })
@@ -81,7 +81,7 @@ describe('inEnum', () => {
       }
       const value = 0
 
-      const result = inEnum<Enum>(value, Enum)
+      const result = inEnum(value, Enum)
 
       expect(result).toBe(true)
     })
@@ -93,7 +93,7 @@ describe('inEnum', () => {
       }
       const value = 1
 
-      const result = inEnum<Enum>(value, Enum)
+      const result = inEnum(value, Enum)
 
       expect(result).toBe(false)
     })
@@ -106,7 +106,7 @@ describe('inEnum', () => {
         }
         const value = 'Foo'
 
-        const result = inEnum<Enum>(value, Enum)
+        const result = inEnum(value, Enum)
 
         expect(result).toBe(false)
       })
@@ -118,7 +118,7 @@ describe('inEnum', () => {
         }
         const value = 'Foo'
 
-        const result = inEnum<Enum>(value, Enum)
+        const result = inEnum(value, Enum)
 
         expect(result).toBe(false)
       })

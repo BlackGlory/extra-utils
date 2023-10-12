@@ -191,10 +191,10 @@ removeTrailingBlankLines(
 
 ### Enum
 ```ts
-function inEnum<T extends string | number>(
+function inEnum<T extends Record<string | number, string | number>>(
   val: string | number
-, _enum: Record<string | number, string | number>
-): val is T
+, _enum: T
+): val is T[keyof T]
 function notInEnum(
   val: string | number
 , _enum: Record<string | number, string | number>
