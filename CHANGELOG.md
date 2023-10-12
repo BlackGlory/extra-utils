@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.5.0](https://github.com/BlackGlory/extra-utils/compare/v5.4.0...v5.5.0) (2023-10-12)
+
+
+### Features
+
+* add `enumKeys`, `enumValues`, `enumEntries` ([fd6a8c9](https://github.com/BlackGlory/extra-utils/commit/fd6a8c93fa85dfc08ced2b1004d6b876722c3f6f))
+
+
+### Bug Fixes
+
+* edge cases of `inEnum`, `notInEnum` ([15b953f](https://github.com/BlackGlory/extra-utils/commit/15b953f2b5f22175aa11c5ed0d10338a12eac432))
+
 ## [5.4.0](https://github.com/BlackGlory/extra-utils/compare/v5.3.0...v5.4.0) (2023-07-20)
 
 
