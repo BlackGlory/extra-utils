@@ -199,6 +199,16 @@ function notInEnum(
   val: string | number
 , _enum: Record<string | number, string | number>
 ): boolean
+
+function enumKeys<T extends Record<string | number, string | number>>(
+  _enum: T
+): Array<keyof T>
+function enumValues<T extends Record<string | number, string | number>>(
+  _enum: T
+): Array<T[keyof T]>
+function enumEntries<T extends Record<string | number, string | number>>(
+  _enum: T
+): Array<[key: keyof T, value: T[keyof T]]>
 ```
 
 ### Date
