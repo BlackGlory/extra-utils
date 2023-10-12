@@ -208,7 +208,7 @@ function enumValues<T extends Record<string | number, string | number>>(
 ): Array<T[keyof T]>
 function enumEntries<T extends Record<string | number, string | number>>(
   _enum: T
-): Array<[key: keyof T, value: T[keyof T]]>
+): Array<{ [Key in keyof T]: [Key, T[Key]] }[keyof T]>
 ```
 
 ### Date
