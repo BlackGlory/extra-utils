@@ -191,22 +191,22 @@ removeTrailingBlankLines(
 
 ### Enum
 ```ts
-function inEnum<T extends Record<string | number, string | number>>(
+function inEnum<T extends Record<string, string | number>>(
   val: string | number
 , _enum: T
 ): val is T[keyof T]
 function notInEnum(
   val: string | number
-, _enum: Record<string | number, string | number>
+, _enum: Record<string, string | number>
 ): boolean
 
-function enumKeys<T extends Record<string | number, string | number>>(
+function enumKeys<T extends Record<string, string | number>>(
   _enum: T
 ): Array<keyof T>
-function enumValues<T extends Record<string | number, string | number>>(
+function enumValues<T extends Record<string, string | number>>(
   _enum: T
 ): Array<T[keyof T]>
-function enumEntries<T extends Record<string | number, string | number>>(
+function enumEntries<T extends Record<string, string | number>>(
   _enum: T
 ): Array<{ [Key in keyof T]: [Key, T[Key]] }[keyof T]>
 ```

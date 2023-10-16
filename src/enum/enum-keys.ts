@@ -1,4 +1,4 @@
-export function enumKeys<T extends Record<string | number, string | number>>(
+export function enumKeys<T extends Record<string, string | number>>(
   _enum: T
 ): Array<keyof T> {
   return Object.keys(_enum)

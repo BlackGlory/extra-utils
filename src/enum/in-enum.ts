@@ -1,6 +1,6 @@
 import { enumValues } from './enum-values.js'
 
-export function inEnum<T extends Record<string | number, string | number>>(
+export function inEnum<T extends Record<string, string | number>>(
   val: string | number
 , _enum: T
 ): val is T[keyof T] {
@@ -10,7 +10,7 @@ export function inEnum<T extends Record<string | number, string | number>>(
 // 由于TypeScript无法从string | number里精确排除掉枚举类型, 因此返回值为boolean.
 export function notInEnum(
   val: string | number
-, _enum: Record<string | number, string | number>
+, _enum: Record<string, string | number>
 ): boolean {
   return !inEnum(val, _enum)
 }
