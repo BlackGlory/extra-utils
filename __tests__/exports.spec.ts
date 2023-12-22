@@ -8,6 +8,7 @@ test('index', () => {
   , 'enumKeys'
   , 'enumValues'
   , 'enumEntries'
+  , 'getEnumKey'
 
   , 'first'
   , 'last'
