@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.7.0](https://github.com/BlackGlory/extra-utils/compare/v5.6.0...v5.7.0) (2024-03-08)
+
+
+### Features
+
+* add `clamp` ([fb3e50b](https://github.com/BlackGlory/extra-utils/commit/fb3e50b9c15301546d5e164d7982b54628c8cadd))
+
 ## [5.6.0](https://github.com/BlackGlory/extra-utils/compare/v5.5.2...v5.6.0) (2023-12-22)
 
 
