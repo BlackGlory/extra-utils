@@ -35,6 +35,7 @@ test('index', () => {
   , 'isNumber', 'isntNumber'
   , 'isFinite', 'isPositiveInfinity', 'isNegativeInfinity'
   , 'isNaN', 'isntNaN'
+  , 'clamp'
 
   , 'isBoolean', 'isntBoolean'
   , 'isFalsy', 'isntFalsy'

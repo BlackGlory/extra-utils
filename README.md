@@ -72,6 +72,11 @@ function isntNaN(val: number): boolean
 
 function isBigInt(val: unknown): val is bigint
 function isntBigInt<T>(val: T): val is Exclude<T, bigint>
+
+function clamp(
+  val: number
+, [min, max]: [min: number, max: number]
+): number
 ```
 
 ### Object
