@@ -1,6 +1,6 @@
 {
   "name": "extra-utils",
-  "version": "5.7.0",
+  "version": "5.8.0",
   "description": "Utilities for JavaScript and Typescript",
   "files": [
     "src",

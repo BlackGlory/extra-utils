@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.8.0](https://github.com/BlackGlory/extra-utils/compare/v5.7.0...v5.8.0) (2024-04-17)
+
+
+### Features
+
+* add `max`, `min`, `sum` ([9d0313a](https://github.com/BlackGlory/extra-utils/commit/9d0313a908fd4e3815f7a5c8d00b87492ce2c804))
+
 ## [5.7.0](https://github.com/BlackGlory/extra-utils/compare/v5.6.0...v5.7.0) (2024-03-08)
 
 
