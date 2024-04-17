@@ -247,6 +247,13 @@ function isSymbol(val: unknown): val is symbol
 function isntSymbol<T>(val: T): val is Exclude<T, symbol>
 ```
 
+### Reducers
+```ts
+function max(result: number, current: number): number
+function min(result: number, current: number): number
+function sum(result: number, current: number): number
+```
+
 ### pipe
 ```ts
 function pipe<A, B, C, D, E, F, G, H>(

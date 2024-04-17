@@ -4,6 +4,10 @@ test('index', () => {
   const expected = [
     'pipe', 'pipeAsync'
 
+  , 'max'
+  , 'min'
+  , 'sum'
+
   , 'inEnum', 'notInEnum'
   , 'enumKeys'
   , 'enumValues'
