@@ -252,6 +252,7 @@ function isntSymbol<T>(val: T): val is Exclude<T, symbol>
 function max(result: number, current: number): number
 function min(result: number, current: number): number
 function sum(result: number, current: number): number
+function product(result: number, current: number): number
 ```
 
 ### pipe

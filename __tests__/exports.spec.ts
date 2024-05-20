@@ -7,6 +7,7 @@ test('index', () => {
   , 'max'
   , 'min'
   , 'sum'
+  , 'product'
 
   , 'inEnum', 'notInEnum'
   , 'enumKeys'
