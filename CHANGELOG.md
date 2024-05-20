@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.9.0](https://github.com/BlackGlory/extra-utils/compare/v5.8.0...v5.9.0) (2024-05-20)
+
+
+### Features
+
+* add `product` ([c490236](https://github.com/BlackGlory/extra-utils/commit/c490236c05ecb4f7afc5e405dcdf621ea12e47ef))
+
 ## [5.8.0](https://github.com/BlackGlory/extra-utils/compare/v5.7.0...v5.8.0) (2024-04-17)
 
 
