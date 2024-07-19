@@ -75,7 +75,7 @@ function isntBigInt<T>(val: T): val is Exclude<T, bigint>
 
 function clamp(
   val: number
-, [min, max]: [min: number, max: number]
+, [min, max]: readonly [min: number, max: number]
 ): number
 
 function remap(
