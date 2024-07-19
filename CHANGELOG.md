@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.10.0](https://github.com/BlackGlory/extra-utils/compare/v5.9.0...v5.10.0) (2024-07-19)
+
+
+### Features
+
+* add `remap` ([ae1386b](https://github.com/BlackGlory/extra-utils/commit/ae1386b48e4090dacdcf22ddf9e46ff251b42c33))
+
 ## [5.9.0](https://github.com/BlackGlory/extra-utils/compare/v5.8.0...v5.9.0) (2024-05-20)
 
 
