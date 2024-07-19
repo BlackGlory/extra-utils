@@ -77,6 +77,12 @@ function clamp(
   val: number
 , [min, max]: [min: number, max: number]
 ): number
+
+function remap(
+  value: number
+, [oldMin, oldMax]: readonly [oldMin: number, oldMax: number]
+, [newMin, newMax]: readonly [newMin: number, newMax: number]
+): number
 ```
 
 ### Object

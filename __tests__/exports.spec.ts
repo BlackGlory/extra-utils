@@ -41,6 +41,7 @@ test('index', () => {
   , 'isFinite', 'isPositiveInfinity', 'isNegativeInfinity'
   , 'isNaN', 'isntNaN'
   , 'clamp'
+  , 'remap'
 
   , 'isBoolean', 'isntBoolean'
   , 'isFalsy', 'isntFalsy'
