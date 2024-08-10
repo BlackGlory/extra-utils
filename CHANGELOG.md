@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.11.0](https://github.com/BlackGlory/extra-utils/compare/v5.10.0...v5.11.0) (2024-08-10)
+
+
+### Features
+
+* add `lerp` ([205c2ff](https://github.com/BlackGlory/extra-utils/commit/205c2fff83bfa8e143fad8f86cc9ca3234e2c66e))
+
 ## [5.10.0](https://github.com/BlackGlory/extra-utils/compare/v5.9.0...v5.10.0) (2024-07-19)
 
 
