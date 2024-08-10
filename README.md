@@ -83,6 +83,11 @@ function remap(
 , [oldMin, oldMax]: readonly [oldMin: number, oldMax: number]
 , [newMin, newMax]: readonly [newMin: number, newMax: number]
 ): number
+
+function lerp(
+  alpha: number
+, [from, to]: readonly [from: number, to: number]
+): number
 ```
 
 ### Object

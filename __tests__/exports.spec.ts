@@ -42,6 +42,7 @@ test('index', () => {
   , 'isNaN', 'isntNaN'
   , 'clamp'
   , 'remap'
+  , 'lerp'
 
   , 'isBoolean', 'isntBoolean'
   , 'isFalsy', 'isntFalsy'
