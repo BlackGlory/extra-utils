@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.13.0](https://github.com/BlackGlory/extra-utils/compare/v5.12.0...v5.13.0) (2024-09-03)
+
+
+### Features
+
+* improve types ([ad10c15](https://github.com/BlackGlory/extra-utils/commit/ad10c15ba3c6b52d2879a59901a8e6592cc6b26f))
+
 ## [5.12.0](https://github.com/BlackGlory/extra-utils/compare/v5.11.0...v5.12.0) (2024-09-03)
 
 
