@@ -20,8 +20,8 @@ function last<T>(arr: ArrayLike<T>): T | undefined
 function isArray<T>(val: unknown): val is Array<T>
 function isntArray<T>(val: T): val is Exclude<T, Array<unknown>>
 
-function isEmptyArray(val: unknown[]): boolean
-function isntEmptyArray<T>(val: T[]): val is NonEmptyArray<T>
+function isEmptyArray(val: readonly unknown[]): boolean
+function isntEmptyArray<T>(val: readonly T[]): val is NonEmptyArray<T>
 ```
 
 ### Boolean
