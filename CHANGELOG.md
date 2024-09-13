@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.14.0](https://github.com/BlackGlory/extra-utils/compare/v5.13.0...v5.14.0) (2024-09-13)
+
+
+### Features
+
+* add `fromEntries` ([6d7bab2](https://github.com/BlackGlory/extra-utils/commit/6d7bab2f2a4ca6bd0ee13e427dcfbd550c44a0af))
+
 ## [5.13.0](https://github.com/BlackGlory/extra-utils/compare/v5.12.0...v5.13.0) (2024-09-03)
 
 
