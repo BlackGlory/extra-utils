@@ -115,6 +115,10 @@ function isntEmptyObject(val: object): boolean
 function isReferenceEqual(a: unknown, b: unknown): boolean
 function isShallowEqual(a: unknown, b: unknown): boolean
 function isDeepEqual(a: unknown, b: unknown): boolean
+
+function fromEntries<Key extends number | string, Value>(
+  entries: Iterable<[Key, Value]>
+): Record<Key, Value>
 ```
 
 ### String
