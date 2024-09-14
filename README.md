@@ -87,6 +87,18 @@ function remap(
 , [newMin, newMax]: readonly [newMin: number, newMax: number]
 ): number
 
+function remapToIndex(
+  value: number
+, range: readonly [min: number, max: number]
+, items: NonEmptyArray<unknown>
+): number
+
+function remapToWeightedIndex(
+  value: number
+, range: [min: number, max: number]
+, weights: NonEmptyArray<number>
+): number
+
 function lerp(
   alpha: number
 , [from, to]: readonly [from: number, to: number]
