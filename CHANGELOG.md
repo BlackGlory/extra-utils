@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.15.0](https://github.com/BlackGlory/extra-utils/compare/v5.14.0...v5.15.0) (2024-09-14)
+
+
+### Features
+
+* add `remapToIndex`, `remapToWeightedIndex` ([6c1013e](https://github.com/BlackGlory/extra-utils/commit/6c1013e912854df235a1e75ce0fe2c55fc90a43e))
+
 ## [5.14.0](https://github.com/BlackGlory/extra-utils/compare/v5.13.0...v5.14.0) (2024-09-13)
 
 
