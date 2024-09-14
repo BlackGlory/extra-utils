@@ -87,6 +87,28 @@ function remap(
 , [newMin, newMax]: readonly [newMin: number, newMax: number]
 ): number
 
+function remapToItem<T>(
+  value: number
+, range: readonly [min: number, max: number]
+, items: NonEmptyArray<T>
+): T
+
+interface IWeightedItem {
+  weight: number
+}
+
+function remapToWeightedItem<T>(
+  value: number
+, range: readonly [min: number, max: number]
+, items: NonEmptyArray<T>
+, weights: NonEmptyArray<number>
+): T
+function remapToWeightedItem<T extends IWeightedItem>(
+  value: number
+, range: readonly [min: number, max: number]
+, items: NonEmptyArray<T>
+): T
+
 function remapToIndex(
   value: number
 , range: readonly [min: number, max: number]
