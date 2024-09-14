@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.16.0](https://github.com/BlackGlory/extra-utils/compare/v5.15.0...v5.16.0) (2024-09-14)
+
+
+### Features
+
+* add `remapToItem`, `remapToWeightedItem` ([8a540e9](https://github.com/BlackGlory/extra-utils/commit/8a540e969161d26a1812fe1d74d21d91afd10751))
+
 ## [5.15.0](https://github.com/BlackGlory/extra-utils/compare/v5.14.0...v5.15.0) (2024-09-14)
 
 
