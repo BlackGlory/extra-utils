@@ -1,4 +1,4 @@
-import { pipe } from '@src/pipe.js'
+import { pipe } from '@src/fp/pipe.js'
 
 describe('pipe', () => {
   test('[input, ...intermediate, output]', () => {

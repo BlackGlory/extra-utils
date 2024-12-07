@@ -1,4 +1,4 @@
-import { max } from '@src/reducers/max.js'
+import { max } from '@src/fp/reducers/max.js'
 
 test('max', () => {
   const arr = [1, 2, 3]

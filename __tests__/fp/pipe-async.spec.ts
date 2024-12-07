@@ -1,4 +1,4 @@
-import { pipeAsync } from '@src/pipe-async.js'
+import { pipeAsync } from '@src/fp/pipe-async.js'
 
 describe('pipeAsync', () => {
   test('[input, ...intermediate, output]', async () => {

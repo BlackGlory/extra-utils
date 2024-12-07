@@ -2,7 +2,9 @@ import * as index from '@src/index.js'
 
 test('index', () => {
   const expected = [
-    'pipe', 'pipeAsync'
+    'not'
+
+  , 'pipe', 'pipeAsync'
 
   , 'max'
   , 'min'

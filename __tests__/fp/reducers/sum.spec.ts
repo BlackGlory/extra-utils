@@ -1,4 +1,4 @@
-import { sum } from '@src/reducers/sum.js'
+import { sum } from '@src/fp/reducers/sum.js'
 
 test('sum', () => {
   const arr = [1, 2, 3]

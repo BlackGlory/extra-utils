@@ -299,15 +299,15 @@ function isSymbol(val: unknown): val is symbol
 function isntSymbol<T>(val: T): val is Exclude<T, symbol>
 ```
 
-### Reducers
+### Functional programming
+#### not
 ```ts
-function max(result: number, current: number): number
-function min(result: number, current: number): number
-function sum(result: number, current: number): number
-function product(result: number, current: number): number
+function not<Args extends unknown[]>(
+  predicate: (...args: Args) => boolean
+): (...args: Args) => boolean
 ```
 
-### pipe
+#### pipe
 ```ts
 function pipe<A, B, C, D, E, F, G, H>(
   value: A
@@ -378,7 +378,7 @@ function pipe<T, U>(
 ): U
 ```
 
-### pipeAsync
+#### pipeAsync
 ```ts
 function pipeAsync<A, B, C, D, E, F, G, H>(
   value: Awaitable<A>
@@ -447,4 +447,12 @@ function pipeAsync<T, U>(
   value: Awaitable<T>
 , ...operators: Array<(value: any) => Awaitable<unknown>>
 ): Promise<U>
+```
+
+#### Reducers
+```ts
+function max(result: number, current: number): number
+function min(result: number, current: number): number
+function sum(result: number, current: number): number
+function product(result: number, current: number): number
 ```

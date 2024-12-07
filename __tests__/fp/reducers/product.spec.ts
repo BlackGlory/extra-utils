@@ -1,4 +1,4 @@
-import { product } from '@src/reducers/product.js'
+import { product } from '@src/fp/reducers/product.js'
 
 test('product', () => {
   const arr = [1, 2, 3]

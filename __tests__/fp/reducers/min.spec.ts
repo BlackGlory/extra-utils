@@ -1,4 +1,4 @@
-import { min } from '@src/reducers/min.js'
+import { min } from '@src/fp/reducers/min.js'
 
 test('min', () => {
   const arr = [1, 2, 3]
