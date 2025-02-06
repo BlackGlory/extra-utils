@@ -47,6 +47,7 @@ test('index', () => {
   , 'remapToItem', 'remapToWeightedItem'
   , 'remapToIndex', 'remapToWeightedIndex'
   , 'lerp'
+  , 'modf'
 
   , 'isBoolean', 'isntBoolean'
   , 'isFalsy', 'isntFalsy'

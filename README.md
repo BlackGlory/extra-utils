@@ -125,6 +125,8 @@ function lerp(
   alpha: number
 , [from, to]: readonly [from: number, to: number]
 ): number
+
+function modf(value: number): [integralPart: number, fractionalPart: number]
 ```
 
 ### Object
