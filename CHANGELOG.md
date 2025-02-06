@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.18.0](https://github.com/BlackGlory/extra-utils/compare/v5.17.0...v5.18.0) (2025-02-06)
+
+
+### Features
+
+* add `modf` ([9c82976](https://github.com/BlackGlory/extra-utils/commit/9c829766f4b347f8252ab65c6375a4fe886e20bc))
+
 ## [5.17.0](https://github.com/BlackGlory/extra-utils/compare/v5.16.0...v5.17.0) (2024-12-07)
 
 
