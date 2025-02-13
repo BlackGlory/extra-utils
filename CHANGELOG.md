@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.18.1](https://github.com/BlackGlory/extra-utils/compare/v5.18.0...v5.18.1) (2025-02-13)
+
+
+### Bug Fixes
+
+* **remap-to-weighted-index:** an edge case caused by float precision ([7c88436](https://github.com/BlackGlory/extra-utils/commit/7c884369ae319a4b1cf3929de79ac900b5aa2134))
+
 ## [5.18.0](https://github.com/BlackGlory/extra-utils/compare/v5.17.0...v5.18.0) (2025-02-06)
 
 
