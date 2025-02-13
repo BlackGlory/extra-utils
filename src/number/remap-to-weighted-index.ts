@@ -26,6 +26,7 @@ export function remapToWeightedIndex(
       }
     }
 
-    throw new Error('Impossible route')
+    // 浮点数运算的精度导致代码可能会运行到此处, 此时newValue的值小于remains的值, 此时直接返回索引0作为结果.
+    return 0
   }
 }
