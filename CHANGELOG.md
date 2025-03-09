@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.19.0](https://github.com/BlackGlory/extra-utils/compare/v5.18.1...v5.19.0) (2025-03-09)
+
+
+### Features
+
+* add `ensureArray` ([095a5d9](https://github.com/BlackGlory/extra-utils/commit/095a5d983465e485b3ff67d258fe650db7573907))
+
 ### [5.18.1](https://github.com/BlackGlory/extra-utils/compare/v5.18.0...v5.18.1) (2025-02-13)
 
 
