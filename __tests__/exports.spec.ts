@@ -22,6 +22,7 @@ test('index', () => {
 
   , 'isArray', 'isntArray'
   , 'isEmptyArray', 'isntEmptyArray'
+  , 'ensureArray'
 
   , 'isDate', 'isntDate'
 

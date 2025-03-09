@@ -16,6 +16,8 @@ function first<T>(arr: ArrayLike<T>): T | undefined
 
 function last<T>(arr: NonEmptyArray<T>): T
 function last<T>(arr: ArrayLike<T>): T | undefined
+
+function ensureArray<T>(value: Arrayable<T>): T[]
 ```
 
 ### Array
