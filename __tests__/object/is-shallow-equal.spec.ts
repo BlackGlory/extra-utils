@@ -1,19 +1,31 @@
 import { isShallowEqual } from '@src/object/is-shallow-equal.js'
 
 describe('isShallowEqual', () => {
-  test('shallow equal', () => {
-    const a = { foo: 'bar' }
-    const b = { foo: 'bar' }
-
+  test.each([
+    [
+      { foo: 'bar' }
+    , { foo: 'bar' }
+    ]
+  , [
+      ['bar']
+    , ['bar']
+    ]
+  ])('shallow equal', (a, b) => {
     const result = isShallowEqual(a, b)
 
     expect(result).toBe(true)
   })
 
-  test('not shallow equal', () => {
-    const a = { foo: 'bar' }
-    const b = { foo: 'baz' }
-
+  test.each([
+    [
+      { foo: 'bar' }
+    , { foo: 'baz' }
+    ]
+  , [
+      ['bar']
+    , ['baz']
+    ]
+  ])('not shallow equal', (a, b) => {
     const result = isShallowEqual(a, b)
 
     expect(result).toBe(false)
