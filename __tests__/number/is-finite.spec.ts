@@ -1,33 +1,30 @@
-import { isFinite } from '@src/number/is-finite.js'
+import { isFinite, isntFinite } from '@src/number/is-finite.js'
 
-describe('isFinite', () => {
-  describe('finite', () => {
-    it('return true', () => {
-      const val = 123
+describe.each([
+  ['isFinite', isFinite, true]
+, ['isntFinite', isntFinite, false]
+])('%s', (_, fn, positiveResult) => {
+  test('finite', () => {
+    const val = 123
 
-      const result = isFinite(val)
+    const result = fn(val)
 
-      expect(result).toBe(true)
-    })
+    expect(result).toBe(positiveResult)
   })
 
-  describe('Infinity', () => {
-    it('return false', () => {
-      const val = Infinity
+  test('Infinity', () => {
+    const val = Infinity
 
-      const result = isFinite(val)
+    const result = fn(val)
 
-      expect(result).toBe(false)
-    })
+    expect(result).toBe(!positiveResult)
   })
 
-  describe('-Infinity', () => {
-    it('return false', () => {
-      const val = -Infinity
+  test('-Infinity', () => {
+    const val = -Infinity
 
-      const result = isFinite(val)
+    const result = fn(val)
 
-      expect(result).toBe(false)
-    })
+    expect(result).toBe(!positiveResult)
   })
 })

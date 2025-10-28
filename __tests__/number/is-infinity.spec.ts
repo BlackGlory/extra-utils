@@ -1,17 +1,9 @@
-import { isNegativeInfinity, isPositiveInfinity } from '@src/number/is-infinity.js'
+import { isNegativeInfinity, isntNegativeInfinity, isntPositiveInfinity, isPositiveInfinity } from '@src/number/is-infinity.js'
 
 describe.each([
   ['isPositiveInfinity', isPositiveInfinity, true]
-, ['isNegativeInfinity', isNegativeInfinity, false]
+, ['isntPositiveInfinity', isntPositiveInfinity, false]
 ])('%s', (_, fn, positiveResult) => {
-  test('finite', () => {
-    const val = 123
-
-    const result = fn(val)
-
-    expect(result).toBe(false)
-  })
-
   test('Infinity', () => {
     const val = Infinity
 
@@ -20,13 +12,48 @@ describe.each([
     expect(result).toBe(positiveResult)
   })
 
-  describe('-Infinity', () => {
-    it('return true', () => {
-      const val = -Infinity
+  test('-Infinity', () => {
+    const val = -Infinity
 
-      const result = fn(val)
+    const result = fn(val)
 
-      expect(result).toBe(!positiveResult)
-    })
+    expect(result).toBe(!positiveResult)
+  })
+
+  test('finite', () => {
+    const val = 123
+
+    const result = fn(val)
+
+    expect(result).toBe(!positiveResult)
+  })
+})
+
+describe.each([
+  ['isNegativeInfinity', isNegativeInfinity, true]
+, ['isntNegativeInfinity', isntNegativeInfinity, false]
+])('%s', (_, fn, positiveResult) => {
+  test('Infinity', () => {
+    const val = Infinity
+
+    const result = fn(val)
+
+    expect(result).toBe(!positiveResult)
+  })
+
+  test('-Infinity', () => {
+    const val = -Infinity
+
+    const result = fn(val)
+
+    expect(result).toBe(positiveResult)
+  })
+
+  test('finite', () => {
+    const val = 123
+
+    const result = fn(val)
+
+    expect(result).toBe(!positiveResult)
   })
 })

@@ -69,8 +69,13 @@ function isNumber(val: unknown): val is number
 function isntNumber<T>(val: T): val is Exclude<T, number>
 
 function isFinite(val: number): boolean
+function isntFinite(val: number): boolean
+
 function isPositiveInfinity(val: number): boolean
+function isntPositiveInfinity(val: number): boolean
+
 function isNegativeInfinity(val: number): boolean
+function isntNegativeInfinity(val: number): boolean
 
 function isNaN(val: number): boolean
 function isntNaN(val: number): boolean
