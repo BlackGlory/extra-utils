@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.20.0](https://github.com/BlackGlory/extra-utils/compare/v5.19.0...v5.20.0) (2025-10-28)
+
+
+### Features
+
+* add `isntFinite`, `isntPositiveInfinity`, `isntNegativeInfinity` ([1e25f9d](https://github.com/BlackGlory/extra-utils/commit/1e25f9d7606fe48d2722497256511999241b552c))
+
 ## [5.19.0](https://github.com/BlackGlory/extra-utils/compare/v5.18.1...v5.19.0) (2025-03-09)
 
 
