@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.21.0](https://github.com/BlackGlory/extra-utils/compare/v5.20.0...v5.21.0) (2026-02-18)
+
+
+### Features
+
+* **remap:** add parameter validators and handle the zero-length range case ([2ba2145](https://github.com/BlackGlory/extra-utils/commit/2ba2145133025c1617d9403c5da6cb9fa54104c1))
+
 ## [5.20.0](https://github.com/BlackGlory/extra-utils/compare/v5.19.0...v5.20.0) (2025-10-28)
 
 
