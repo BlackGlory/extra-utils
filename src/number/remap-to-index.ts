@@ -17,4 +17,13 @@ export function remapToIndex(
   return index === items.length
        ? items.length - 1
        : index
+
+  // 上方代码在均匀性上优于使用`Math.round`的实现:
+  // return Math.round(
+  //   remap(
+  //     value
+  //   , range
+  //   , [0, items.length - 1]
+  //   )
+  // )
 }
