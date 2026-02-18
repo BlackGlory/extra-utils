@@ -22,4 +22,11 @@ describe('remap', () => {
     expect(remap(0.5, oldRange, newRange)).toBe(17.5)
     expect(remap(1, oldRange, newRange)).toBe(20)
   })
+
+  test('edge: zero-length range', () => {
+    const oldRange = [0, 0] as const
+    const newRange = [10, 10] as const
+
+    expect(remap(0, oldRange, newRange)).toBe(10)
+  })
 })

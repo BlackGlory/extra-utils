@@ -593,6 +593,14 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@blackglory/errors@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@blackglory/errors/-/errors-3.1.0.tgz#bacef020cb27dcf9ecaf75ec5a7df56b26d8367e"
+  integrity sha512-GP8sPdN5/9Gd0BrhPDCXqGkjg86FgOyf9ZkQkKrqWg2c46I4G3qrZ+xwlnYzkSV6XfsvCkzI6FMc8kFTHbnSJg==
+  dependencies:
+    "@blackglory/pass" "^1.1.0"
+    extra-utils "^5.1.1"
+
 "@blackglory/jest-resolver@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@blackglory/jest-resolver/-/jest-resolver-0.3.0.tgz#2699a157bfcd7b27b6ac1e90b3b6ddda5b725fc2"
@@ -2547,6 +2555,14 @@ expect@^29.5.0:
     jest-matcher-utils "^29.5.0"
     jest-message-util "^29.5.0"
     jest-util "^29.5.0"
+
+extra-utils@^5.1.1:
+  version "5.20.0"
+  resolved "https://registry.yarnpkg.com/extra-utils/-/extra-utils-5.20.0.tgz#ae1b2cba863700933b7ce3bd013b73915f9c1841"
+  integrity sha512-cZm0kiCeOT05fXYHctD1mFYmaSkPtGFEmvuG0Fa+WfhMH8u6jle8pvGcjU10I3wW91dnV36nJKWum8QLDTwhOQ==
+  dependencies:
+    justypes "^4.2.0"
+    lodash-es "^4.17.21"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"

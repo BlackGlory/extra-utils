@@ -59,6 +59,7 @@
     "typescript-transform-paths": "^3.4.6"
   },
   "dependencies": {
+    "@blackglory/errors": "^3.1.0",
     "justypes": "^4.2.0",
     "lodash-es": "^4.17.21"
   }
