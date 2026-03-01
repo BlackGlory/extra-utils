@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { remapToIndex } from '@src/number/remap-to-index.js'
 import { NonEmptyArray } from 'justypes'
 

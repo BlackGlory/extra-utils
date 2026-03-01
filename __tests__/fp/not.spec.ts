@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { not } from '@src/fp/not.js'
 
 test('not', () => {

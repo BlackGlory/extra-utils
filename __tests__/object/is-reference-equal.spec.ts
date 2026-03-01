@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isReferenceEqual } from '@src/object/is-reference-equal.js'
 
 describe('isReferenceEqual', () => {

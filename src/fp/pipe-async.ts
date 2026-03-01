@@ -65,7 +65,7 @@ export function pipeAsync<A, B>(
 ): Promise<B>
 export function pipeAsync<T, U>(
   value: Awaitable<T>
-, ...operators: Array<(value: any) => Awaitable<unknown>>
+, ...operators: Array<(value: unknown) => Awaitable<unknown>>
 ): Promise<U>
 export async function pipeAsync<T, U>(
   value: Awaitable<T>

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isString, isntString } from '@src/string/is-string.js'
 
 describe.each([

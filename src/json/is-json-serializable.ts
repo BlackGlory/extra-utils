@@ -4,7 +4,9 @@ import { isFunction } from '@src/is-function.js'
 
 export function isJSONSerializable<T extends
 | JSONValue
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 | Record<string, JSONValue | JSONSerializable<any>>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 | Array<JSONValue | JSONSerializable<any>>
 >(val: unknown): val is JSONSerializable<T> {
   return isObject(val)
@@ -12,6 +14,9 @@ export function isJSONSerializable<T extends
       && isFunction(val.toJSON)
 }
 
-export function isntJSONSerializable<T>(val: T): val is Exclude<T, JSONSerializable<any>> {
+export function isntJSONSerializable<T>(
+  val: T
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+): val is Exclude<T, JSONSerializable<any>> {
   return !isJSONSerializable(val)
 }

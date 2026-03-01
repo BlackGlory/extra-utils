@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isBoolean, isntBoolean } from '@src/boolean/is-boolean.js'
 
 describe.each([

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { remap } from '@src/number/remap.js'
 
 describe('remap', () => {

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isFunction, isntFunction } from '@src/is-function.js'
 import { pass } from '@blackglory/pass'
 
@@ -8,7 +9,7 @@ describe.each([
   test('is function', () => {
     const value = pass
 
-    // @ts-ignore
+    // @ts-expect-error type error
     const result = fn(value)
 
     expect(result).toBe(positiveResult)
@@ -17,7 +18,7 @@ describe.each([
   test('isnt function', () => {
     const value = null
 
-    // @ts-ignore
+    // @ts-expect-error type error
     const result = fn(value)
 
     expect(result).toBe(!positiveResult)

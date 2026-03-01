@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isDate, isntDate } from '@src/is-date.js'
 
 describe.each([

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { enumEntries } from '@src/enum/enum-entries.js'
 
 describe('enumEntries', () => {

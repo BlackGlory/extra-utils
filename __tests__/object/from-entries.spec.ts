@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { fromEntries } from '@src/object/from-entries.js'
 
 test('fromEntries', () => {

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isFinite, isntFinite } from '@src/number/is-finite.js'
 
 describe.each([

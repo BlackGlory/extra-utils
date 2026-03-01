@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isSymbol, isntSymbol } from '@src/is-symbol.js'
 
 describe.each([

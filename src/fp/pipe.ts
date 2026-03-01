@@ -63,7 +63,7 @@ export function pipe<A, B>(
 ): B
 export function pipe<T, U>(
   value: T
-, ...operators: Array<(value: any) => unknown>
+, ...operators: Array<(value: unknown) => unknown>
 ): U
 export function pipe<T, U>(
   value: T

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isNaN, isntNaN } from '@src/number/is-nan.js'
 
 describe.each([

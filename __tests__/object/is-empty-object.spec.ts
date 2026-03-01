@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isEmptyObject, isntEmptyObject } from '@src/object/is-empty-object.js'
 
 describe.each([

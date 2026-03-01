@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { sum } from '@src/fp/reducers/sum.js'
 
 test('sum', () => {

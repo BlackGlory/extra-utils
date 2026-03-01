@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import * as index from '@src/index.js'
 
 test('index', () => {

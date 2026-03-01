@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isNumber, isntNumber } from '@src/number/is-number.js'
 
 describe.each([

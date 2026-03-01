@@ -1,9 +1,11 @@
+import { describe, test, expect } from 'vitest'
 import { getEnumKey } from '@src/enum/get-enum-key.js'
 
 describe('getEnumKey', () => {
   test('numeric enums', () => {
     enum Enum {
       Foo = 0
+      // eslint-disable-next-line @typescript-eslint/no-duplicate-enum-values
     , Bar = 0
     }
 
@@ -15,6 +17,7 @@ describe('getEnumKey', () => {
   test('string enums', () => {
     enum Enum {
       Foo = 'foo'
+      // eslint-disable-next-line @typescript-eslint/no-duplicate-enum-values
     , Bar = 'foo'
     }
 

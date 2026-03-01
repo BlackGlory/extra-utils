@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isBigInt, isntBigInt } from '@src/number/is-bigint.js'
 
 describe.each([

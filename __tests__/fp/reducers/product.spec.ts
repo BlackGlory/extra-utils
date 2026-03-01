@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { product } from '@src/fp/reducers/product.js'
 
 test('product', () => {

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { IWeightedItem, remapToWeightedItem } from '@src/number/remap-to-weighted-item.js'
 import { NonEmptyArray } from 'justypes'
 

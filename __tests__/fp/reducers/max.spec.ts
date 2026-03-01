@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { max } from '@src/fp/reducers/max.js'
 
 test('max', () => {

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isNegativeInfinity, isntNegativeInfinity, isntPositiveInfinity, isPositiveInfinity } from '@src/number/is-infinity.js'
 
 describe.each([

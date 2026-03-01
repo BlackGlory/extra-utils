@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { removeTrailingBlankLines } from '@src/string/remove-trailing-blank-lines.js'
 
 describe('removeTrailingBlankLines', () => {

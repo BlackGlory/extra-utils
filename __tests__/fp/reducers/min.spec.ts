@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { min } from '@src/fp/reducers/min.js'
 
 test('min', () => {

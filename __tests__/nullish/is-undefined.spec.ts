@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isUndefined, isntUndefined } from '@src/nullish/is-undefined.js'
 
 describe.each([

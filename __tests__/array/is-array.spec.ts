@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isArray, isntArray } from '@src/array/is-array.js'
 
 describe.each([

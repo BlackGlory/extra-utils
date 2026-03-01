@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isShallowEqual } from '@src/object/is-shallow-equal.js'
 
 describe('isShallowEqual', () => {

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { pipeAsync } from '@src/fp/pipe-async.js'
 
 describe('pipeAsync', () => {

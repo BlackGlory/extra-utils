@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 import { removeBlankLines } from '@src/string/remove-blank-lines.js'
 
 test('removeBlankLines', () => {

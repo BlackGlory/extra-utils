@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { pipe } from '@src/fp/pipe.js'
 
 describe('pipe', () => {

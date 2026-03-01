@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { first } from '@src/array-like/first.js'
 
 describe('first', () => {

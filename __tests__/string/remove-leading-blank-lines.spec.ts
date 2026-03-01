@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { removeLeadingBlankLines } from '@src/string/remove-leading-blank-lines.js'
 
 describe('removeLeadingBlankLines', () => {

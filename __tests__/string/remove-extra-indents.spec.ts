@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { removeExtraIndents } from '@src/string/remove-extra-indents.js'
 
 describe('removeExtraIndents', () => {

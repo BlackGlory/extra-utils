@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isRegExp, isntRegExp } from '@src/is-regexp.js'
 
 describe.each([

@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { isPlainObject, isntPlainObject } from '@src/object/is-plain-object.js'
 import { pass } from '@blackglory/pass'
 

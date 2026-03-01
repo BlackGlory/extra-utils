@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { modf } from '@src/number/modf.js'
 
 describe('modf', () => {

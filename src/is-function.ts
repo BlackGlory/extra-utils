@@ -1,4 +1,4 @@
-export function isFunction<T extends Function = (...args: any[]) => any>(
+export function isFunction<T extends Function = (...args: unknown[]) => unknown>(
   val: unknown
 ): val is T {
   return typeof val === 'function'
