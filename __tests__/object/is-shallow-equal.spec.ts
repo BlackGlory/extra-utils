@@ -1,5 +1,6 @@
 import { describe, test, expect } from 'vitest'
 import { isShallowEqual } from '@src/object/is-shallow-equal.js'
+import { go } from '@blackglory/go'
 
 describe('isShallowEqual', () => {
   test.each([
@@ -8,10 +9,14 @@ describe('isShallowEqual', () => {
     , { foo: 'bar' }
     ]
   , [
-      ['bar']
-    , ['bar']
+      ['foo']
+    , ['foo']
     ]
-  ])('shallow equal', (a, b) => {
+  , go(() => {
+      const date = new Date('2026-01-01')
+      return [date, date]
+    })
+  ])('shallow equal $0, $1', (a, b) => {
     const result = isShallowEqual(a, b)
 
     expect(result).toBe(true)
@@ -23,10 +28,22 @@ describe('isShallowEqual', () => {
     , { foo: 'baz' }
     ]
   , [
-      ['bar']
-    , ['baz']
+      ['foo']
+    , ['bar']
     ]
-  ])('not shallow equal', (a, b) => {
+  , [
+      { foo: { bar: 'baz' }}
+    , { foo: { bar: 'baz' }}
+    ]
+  , [
+      [{ foo: 'bar' }]
+    , [{ foo: 'bar' }]
+    ]
+  , [
+      new Date('2026-01-01')
+    , new Date('2026-01-01')
+    ]
+  ])('not shallow equal $0, $1', (a, b) => {
     const result = isShallowEqual(a, b)
 
     expect(result).toBe(false)

@@ -1,10 +1,19 @@
 import { isReferenceEqual } from './is-reference-equal.js'
-import { isObject } from './is-object.js'
+import { isPlainObject } from './is-plain-object.js'
+import { isArray } from '@src/array/is-array.js'
 
 export function isDeepEqual(a: unknown, b: unknown): boolean {
   if (isReferenceEqual(a, b)) return true
 
-  if (isObject(a) && isObject(b)) {
+  if (isArray(a) && isArray(b)) {
+    if (a.length === b.length) {
+      for (let i = 0; i < a.length; i++) {
+        if (!isDeepEqual(a[i], b[i])) return false
+      }
+
+      return true
+    }
+  } else if (isPlainObject(a) && isPlainObject(b)) {
     const keysA = Reflect.ownKeys(a)
     const keysB = Reflect.ownKeys(b)
 
