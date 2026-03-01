@@ -38,6 +38,7 @@ test('index', () => {
   , 'removeLeadingBlankLines'
   , 'removeTrailingBlankLines'
   , 'toString'
+  , 'parseHostnamePort'
 
   , 'isBigInt', 'isntBigInt'
   , 'isNumber', 'isntNumber'

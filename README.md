@@ -176,6 +176,11 @@ function isURLString(text: string): boolean
 function isntURLString(text: string): boolean
 
 function toString(val: unknown): string
+
+function parseHostnamePort(hostnamePort: string): {
+  hostname: string
+  port: number | undefined
+}
 ```
 
 #### removeExtraIndents
