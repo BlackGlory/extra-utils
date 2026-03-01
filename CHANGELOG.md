@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/BlackGlory/extra-utils/compare/v5.21.0...v6.0.0) (2026-03-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* Node.js v12 => Node.js v22
+
+### Features
+
+* add `parseHostnamePort` ([da8575c](https://github.com/BlackGlory/extra-utils/commit/da8575ce3fad33b49eccb4e28ec336096870cb52))
+
 ## [5.21.0](https://github.com/BlackGlory/extra-utils/compare/v5.20.0...v5.21.0) (2026-02-18)
 
 
