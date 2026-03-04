@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.1.0](https://github.com/BlackGlory/extra-utils/compare/v6.0.1...v6.1.0) (2026-03-04)
+
+
+### Features
+
+* **pipe, pipe-async:** improve types ([32723b5](https://github.com/BlackGlory/extra-utils/commit/32723b59f54783ef304cd09e52b0ad5e7c16b071))
+
 ### [6.0.1](https://github.com/BlackGlory/extra-utils/compare/v6.0.0...v6.0.1) (2026-03-01)
 
 
