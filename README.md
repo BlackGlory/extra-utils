@@ -388,7 +388,7 @@ function pipe<A, B>(
 ): B
 function pipe<T, U>(
   value: T
-, ...operators: Array<(value: unknown) => unknown>
+, ...operators: Array<(value: any) => unknown>
 ): U
 ```
 
@@ -459,7 +459,7 @@ function pipeAsync<A, B>(
 ): Promise<B>
 function pipeAsync<T, U>(
   value: Awaitable<T>
-, ...operators: Array<(value: unknown) => Awaitable<unknown>>
+, ...operators: Array<(value: any) => Awaitable<unknown>>
 ): Promise<U>
 ```
 

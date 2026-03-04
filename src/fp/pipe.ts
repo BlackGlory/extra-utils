@@ -63,7 +63,9 @@ export function pipe<A, B>(
 ): B
 export function pipe<T, U>(
   value: T
-, ...operators: Array<(value: unknown) => unknown>
+  // 此处any有意义, 不可替换为unknown.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+, ...operators: Array<(value: any) => unknown>
 ): U
 export function pipe<T, U>(
   value: T

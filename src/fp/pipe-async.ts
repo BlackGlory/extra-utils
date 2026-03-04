@@ -65,7 +65,9 @@ export function pipeAsync<A, B>(
 ): Promise<B>
 export function pipeAsync<T, U>(
   value: Awaitable<T>
-, ...operators: Array<(value: unknown) => Awaitable<unknown>>
+  // 此处any有意义, 不可替换为unknown.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+, ...operators: Array<(value: any) => Awaitable<unknown>>
 ): Promise<U>
 export async function pipeAsync<T, U>(
   value: Awaitable<T>
