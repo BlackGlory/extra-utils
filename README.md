@@ -323,56 +323,14 @@ function not<Args extends unknown[]>(
 
 #### pipe
 ```ts
-function pipe<A, B, C, D, E, F, G, H>(
+function pipe<A, ..., Z>(
   value: A
 , ...operators: [
     (value: A) => B
-  , (value: B) => C
-  , (value: C) => D
-  , (value: D) => E
-  , (value: E) => F
-  , (value: F) => G
-  , (value: G) => H
+  , ...
+  , (value: Y) => Z
   ]
-): H
-function pipe<A, B, C, D, E, F, G>(
-  value: A
-, ...operators: [
-    (value: A) => B
-  , (value: B) => C
-  , (value: C) => D
-  , (value: D) => E
-  , (value: E) => F
-  , (value: F) => G
-  ]
-): G
-function pipe<A, B, C, D, E, F>(
-  value: A
-, ...operators: [
-    (value: A) => B
-  , (value: B) => C
-  , (value: C) => D
-  , (value: D) => E
-  , (value: E) => F
-  ]
-): F
-function pipe<A, B, C, D, E>(
-  value: A
-, ...operators: [
-    (value: A) => B
-  , (value: B) => C
-  , (value: C) => D
-  , (value: D) => E
-  ]
-): E
-function pipe<A, B, C, D>(
-  value: A
-, ...operators: [
-    (value: A) => B
-  , (value: B) => C
-  , (value: C) => D
-  ]
-): D
+): Z
 function pipe<A, B, C>(
   value: A
 , ...operators: [
@@ -394,56 +352,14 @@ function pipe<T, U>(
 
 #### pipeAsync
 ```ts
-function pipeAsync<A, B, C, D, E, F, G, H>(
+function pipeAsync<A, ..., Z>(
   value: Awaitable<A>
 , ...operators: [
     (value: A) => Awaitable<B>
-  , (value: B) => Awaitable<C>
-  , (value: C) => Awaitable<D>
-  , (value: D) => Awaitable<E>
-  , (value: E) => Awaitable<F>
-  , (value: F) => Awaitable<G>
-  , (value: G) => Awaitable<H>
+  , ...
+  , (value: Y) => Awaitable<Z>
   ]
-): Promise<H>
-function pipeAsync<A, B, C, D, E, F, G>(
-  value: Awaitable<A>
-, ...operators: [
-    (value: A) => Awaitable<B>
-  , (value: B) => Awaitable<C>
-  , (value: C) => Awaitable<D>
-  , (value: D) => Awaitable<E>
-  , (value: E) => Awaitable<F>
-  , (value: F) => Awaitable<G>
-  ]
-): Promise<G>
-function pipeAsync<A, B, C, D, E, F>(
-  value: Awaitable<A>
-, ...operators: [
-    (value: A) => Awaitable<B>
-  , (value: B) => Awaitable<C>
-  , (value: C) => Awaitable<D>
-  , (value: D) => Awaitable<E>
-  , (value: E) => Awaitable<F>
-  ]
-): Promise<F>
-function pipeAsync<A, B, C, D, E>(
-  value: Awaitable<A>
-, ...operators: [
-    (value: A) => Awaitable<B>
-  , (value: B) => Awaitable<C>
-  , (value: C) => Awaitable<D>
-  , (value: D) => Awaitable<E>
-  ]
-): Promise<E>
-function pipeAsync<A, B, C, D>(
-  value: Awaitable<A>
-, ...operators: [
-    (value: A) => Awaitable<B>
-  , (value: B) => Awaitable<C>
-  , (value: C) => Awaitable<D>
-  ]
-): Promise<D>
+): Promise<Z>
 function pipeAsync<A, B, C>(
   value: Awaitable<A>
 , ...operators: [
