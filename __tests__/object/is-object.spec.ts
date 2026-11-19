@@ -69,4 +69,20 @@ describe.each([
 
     expect(result).toBe(!positiveResult)
   })
+
+  test('undefined', () => {
+    const value = undefined
+
+    const result = fn(value)
+
+    expect(result).toBe(!positiveResult)
+  })
+
+  test('null', () => {
+    const value = null
+
+    const result = fn(value)
+
+    expect(result).toBe(!positiveResult)
+  })
 })
