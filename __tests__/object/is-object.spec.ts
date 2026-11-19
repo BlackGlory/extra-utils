@@ -14,6 +14,14 @@ describe.each([
     expect(result).toBe(positiveResult)
   })
 
+  test('class instance', () => {
+    const value = new String('string')
+
+    const result = fn(value)
+
+    expect(result).toBe(positiveResult)
+  })
+
   test('array', () => {
     const value: unknown = []
 
@@ -46,11 +54,19 @@ describe.each([
     expect(result).toBe(!positiveResult)
   })
 
-  test('String', () => {
-    const value = new String('string')
+  test('boolean', () => {
+    const value = 'string'
 
     const result = fn(value)
 
-    expect(result).toBe(positiveResult)
+    expect(result).toBe(!positiveResult)
+  })
+
+  test('symbol', () => {
+    const value = Symbol()
+
+    const result = fn(value)
+
+    expect(result).toBe(!positiveResult)
   })
 })
